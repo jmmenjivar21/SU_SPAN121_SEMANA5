@@ -1,0 +1,2341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spanish 121 · Capítulo 4.1 · Semana 5 · Lugares — ser/estar/haber, preguntas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Space+Mono:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   CAPÍTULO 4.1 · SEMANA 5 · SPAN 121 · LUGARES
+   Campus Vocab · ser/estar/haber · Question Words
+   ═══════════════════════════════════════════════════════════════ */
+
+:root{
+  --navy:#1B2E4F;
+  --navy-light:#2E4977;
+  --terracotta:#C45D3A;
+  --terracotta-light:#E0876A;
+  --gold:#D4A24C;
+  --gold-light:#EBC373;
+  --sage:#6E8C5F;
+  --sage-light:#9CB590;
+  --cream:#FBF7EE;
+  --cream-dark:#F0E9D8;
+  --text:#1a1a1a;
+  --text-light:#444;
+  --text-hint:#666;
+  --soft-shadow:0 4px 16px rgba(27,46,79,0.08);
+  --tile-shadow:0 2px 8px rgba(27,46,79,0.06);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  line-height:1.55;
+  font-size:16px;
+  min-height:100vh;
+}
+
+/* Accessibility */
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--navy);color:#fff;padding:10px 16px;z-index:9999;text-decoration:none;}
+.skip-link:focus{left:8px;top:8px;}
+*:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px;}
+
+.app{max-width:1200px;margin:0 auto;padding:0 20px 64px;position:relative;}
+
+/* Watermark */
+.app::before{
+  content:'4.1';
+  position:fixed;top:18px;right:24px;z-index:0;
+  font-family:'Playfair Display',serif;
+  font-size:9rem;font-weight:800;
+  color:var(--navy);opacity:0.04;
+  pointer-events:none;line-height:1;
+}
+
+/* Header */
+.chap-head{
+  margin-top:36px;padding:32px 36px;border-radius:18px;
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);
+  color:#fff;box-shadow:var(--soft-shadow);
+  position:relative;overflow:hidden;
+}
+.chap-head::after{
+  content:'';position:absolute;right:-40px;bottom:-40px;
+  width:180px;height:180px;border-radius:50%;
+  background:radial-gradient(circle,rgba(212,162,76,0.25),transparent 70%);
+}
+.header-badge{
+  display:inline-block;font-family:'Space Mono',monospace;
+  font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;
+  background:rgba(212,162,76,0.22);color:var(--gold-light);
+  padding:5px 12px;border-radius:20px;margin-bottom:10px;
+}
+.header-title{
+  display:block;font-family:'Playfair Display',serif;
+  font-size:2.2rem;font-weight:700;line-height:1.15;margin-bottom:6px;
+}
+.header-subtitle{
+  display:block;font-family:'Space Mono',monospace;
+  font-size:0.85rem;letter-spacing:0.1em;color:var(--gold-light);
+  text-transform:uppercase;
+}
+
+/* Progress bar */
+.prog-bar{
+  height:8px;background:var(--cream-dark);border-radius:4px;
+  margin:6px 0 0;overflow:hidden;
+}
+.prog-fill{
+  height:100%;background:linear-gradient(90deg,var(--terracotta),var(--gold));
+  width:0%;transition:width 0.6s ease-out;
+}
+
+/* Completion meter + name/report bar */
+.completion-wrap{margin:22px 0 20px;}
+.completion-top{display:flex;align-items:center;gap:12px;}
+.completion-label{
+  font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--text-hint);
+}
+.completion-pct{
+  font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;
+  color:var(--terracotta);margin-left:auto;
+}
+.completion-legend{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.legend-pill{
+  font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.04em;
+  padding:4px 10px;border-radius:20px;background:var(--cream-dark);
+  color:var(--text-light);border:1px solid transparent;cursor:pointer;
+  transition:all 0.2s;
+}
+.legend-pill:hover{background:#e6d9c2;color:var(--navy);}
+.legend-pill.done{
+  background:rgba(110,140,95,0.18);border-color:var(--sage);color:var(--sage);
+}
+
+.submit-bar{
+  background:var(--cream-dark);border-radius:12px;
+  padding:14px 18px;margin-bottom:22px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+}
+.submit-bar label{
+  font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.08em;
+  text-transform:uppercase;color:var(--text-light);
+}
+#studentName{
+  flex:1;min-width:210px;border:2px solid #e2d5bd;border-radius:8px;
+  background:#fff;padding:9px 13px;font-family:inherit;font-size:0.94rem;color:var(--navy);
+}
+#studentName:focus{outline:none;border-color:var(--gold);}
+.btn-download{
+  background:var(--terracotta);color:#fff;border:none;border-radius:8px;
+  padding:10px 20px;cursor:pointer;
+  font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;
+  transition:background 0.2s,transform 0.2s;
+}
+.btn-download:hover{background:var(--terracotta-light);transform:translateY(-1px);}
+.submit-hint{
+  width:100%;font-family:'Space Mono',monospace;font-size:0.62rem;
+  color:var(--text-hint);letter-spacing:0.04em;
+}
+
+/* Comprehension quizzes */
+.quiz-item{
+  background:var(--cream);border-radius:12px;padding:16px 18px;
+  margin-bottom:14px;border-left:4px solid var(--sage);
+}
+.quiz-item.correct{background:#eef6ea;border-left-color:var(--sage);}
+.quiz-item.wrong{background:#fbeceb;border-left-color:var(--terracotta);}
+.quiz-q{font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:2px;}
+.quiz-q .qnum{
+  font-family:'Space Mono',monospace;font-size:0.72rem;
+  color:var(--text-hint);font-weight:400;margin-right:6px;
+}
+.quiz-gloss{font-size:0.8rem;color:var(--text-hint);font-style:italic;margin-bottom:12px;}
+.quiz-options{display:grid;gap:7px;}
+.quiz-opt{
+  display:flex;align-items:flex-start;gap:10px;background:#fff;
+  border:2px solid var(--cream-dark);border-radius:9px;padding:9px 13px;
+  font-size:0.88rem;cursor:pointer;text-align:left;
+  font-family:inherit;color:var(--text);width:100%;
+  transition:border-color 0.2s,background 0.2s;
+}
+.quiz-opt:hover{border-color:var(--sage-light);background:#fbfaf6;}
+.quiz-opt.selected{border-color:var(--navy);background:#f3f5fa;}
+.quiz-opt.is-correct{border-color:var(--sage);background:#eef6ea;}
+.quiz-opt.is-wrong{border-color:var(--terracotta);background:#fbeceb;}
+.quiz-opt .letter{
+  font-family:'Space Mono',monospace;font-size:0.7rem;
+  color:var(--text-hint);flex-shrink:0;margin-top:2px;
+}
+.quiz-explain{
+  font-size:0.84rem;margin-top:10px;padding:10px 13px;border-radius:8px;
+  background:#fff;border-left:3px solid var(--gold);display:none;
+}
+.quiz-explain.show{display:block;}
+
+.tf-row{display:flex;gap:8px;margin-bottom:12px;}
+.tf-btn{
+  font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.06em;
+  text-transform:uppercase;background:#fff;border:2px solid var(--cream-dark);
+  border-radius:8px;padding:8px 20px;cursor:pointer;color:var(--text);transition:all 0.2s;
+}
+.tf-btn:hover{border-color:var(--sage-light);}
+.tf-btn.selected{background:var(--navy);border-color:var(--navy);color:#fff;}
+.tf-btn.is-correct{background:var(--sage);border-color:var(--sage);color:#fff;}
+.tf-btn.is-wrong{background:var(--terracotta);border-color:var(--terracotta);color:#fff;}
+.tf-label{
+  font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.06em;
+  text-transform:uppercase;color:var(--text-hint);margin-bottom:5px;
+}
+
+/* Resource check questions */
+.res-check{margin-top:12px;padding-top:12px;border-top:1px dashed var(--cream-dark);}
+.res-check .rc-label{
+  font-family:'Space Mono',monospace;font-size:0.57rem;letter-spacing:0.08em;
+  text-transform:uppercase;color:var(--sage);margin-bottom:6px;
+}
+.res-check .rc-q{font-size:0.83rem;margin-bottom:4px;color:var(--text);}
+.res-check .rc-gloss{font-size:0.73rem;color:var(--text-hint);font-style:italic;margin-bottom:8px;}
+.res-check .quiz-opt{font-size:0.8rem;padding:7px 11px;}
+
+/* Task-style open inputs */
+.task-input{
+  width:100%;border:none;border-bottom:2px solid var(--cream-dark);
+  background:transparent;font-family:inherit;font-size:0.92rem;
+  color:var(--navy);padding:5px 6px;
+}
+.task-input:focus{outline:none;border-bottom-color:var(--gold);}
+.task-fb{
+  font-family:'Space Mono',monospace;font-size:0.66rem;margin-top:6px;display:none;
+}
+.task-fb.show{display:block;}
+.task-fb.ok{color:var(--sage);}
+.task-fb.ng{color:var(--terracotta);}
+
+.task-row{
+  display:flex;align-items:center;gap:10px;background:var(--cream);
+  border-radius:9px;padding:11px 14px;margin-bottom:9px;flex-wrap:wrap;
+}
+.task-row .rnum{
+  font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--text-hint);min-width:20px;
+}
+.task-tag{
+  font-family:'Space Mono',monospace;font-size:0.6rem;background:var(--cream-dark);
+  color:var(--navy);padding:3px 9px;border-radius:4px;white-space:nowrap;
+}
+.task-row .task-fb{width:100%;padding-left:30px;}
+.strike{text-decoration:line-through;color:var(--terracotta);}
+
+/* Discussion post */
+.disc-box{
+  width:100%;border:2px solid var(--cream-dark);border-radius:12px;
+  padding:16px;font-family:inherit;font-size:0.93rem;color:var(--navy);
+  resize:vertical;min-height:170px;background:#fff;transition:border-color 0.2s;
+}
+.disc-box:focus{outline:none;border-color:var(--gold);}
+.wordcount{
+  font-family:'Space Mono',monospace;font-size:0.66rem;
+  color:var(--text-hint);margin-top:6px;
+}
+.wordcount.ok{color:var(--sage);}
+.wordcount.ng{color:var(--terracotta);}
+.req-list{list-style:none;margin:0;padding:0;}
+.req-list li{
+  background:var(--cream);border-left:4px solid var(--terracotta);
+  border-radius:0 9px 9px 0;padding:12px 16px;margin-bottom:10px;font-size:0.92rem;
+}
+.rubric-table{width:100%;border-collapse:collapse;font-size:0.88rem;margin-top:6px;}
+.rubric-table th{
+  background:var(--navy);color:#fff;text-align:left;padding:9px 12px;
+  font-family:'Space Mono',monospace;font-size:0.64rem;
+  letter-spacing:0.08em;text-transform:uppercase;
+}
+.rubric-table td{padding:9px 12px;border-bottom:1px solid var(--cream-dark);}
+.rubric-table td:last-child{text-align:right;white-space:nowrap;color:var(--text-light);}
+
+/* Tabs */
+.nav{
+  display:flex;gap:4px;flex-wrap:wrap;
+  background:#fff;padding:6px;border-radius:14px;
+  box-shadow:var(--tile-shadow);margin-bottom:24px;
+}
+.tab{
+  flex:1 1 auto;min-width:120px;padding:12px 16px;
+  background:transparent;border:none;border-radius:10px;
+  font-family:'Source Sans 3',sans-serif;font-size:0.92rem;
+  font-weight:600;color:var(--text-light);cursor:pointer;
+  transition:all 0.18s ease;min-height:44px;
+}
+.tab:hover{background:var(--cream-dark);color:var(--navy);}
+.tab.active{
+  background:var(--navy);color:#fff;
+  box-shadow:0 2px 6px rgba(27,46,79,0.25);
+}
+
+/* Sections */
+.sec{display:none;animation:fadein 0.3s ease;}
+.sec.active{display:block;}
+@keyframes fadein{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+/* Section title */
+.sec-title{
+  font-family:'Playfair Display',serif;
+  font-size:1.65rem;font-weight:700;color:var(--navy);
+  margin-bottom:6px;
+}
+.sec-sub{
+  font-family:'Space Mono',monospace;
+  font-size:0.78rem;letter-spacing:0.12em;
+  color:var(--terracotta);text-transform:uppercase;
+  margin-bottom:22px;
+}
+
+/* Hero */
+.week-hero{
+  background:#fff;padding:26px 30px;border-radius:14px;
+  margin-bottom:24px;box-shadow:var(--tile-shadow);
+  border-left:5px solid var(--terracotta);
+}
+.week-hero h1{
+  font-family:'Playfair Display',serif;font-size:1.55rem;
+  color:var(--navy);margin-bottom:8px;
+}
+.week-hero p{font-size:0.97rem;color:var(--text-light);margin-bottom:14px;}
+.topic-chips{display:flex;flex-wrap:wrap;gap:7px;}
+.chip{
+  display:inline-block;padding:5px 11px;background:var(--cream-dark);
+  color:var(--navy);border-radius:14px;
+  font-size:0.78rem;font-weight:600;
+  font-family:'Space Mono',monospace;letter-spacing:0.02em;
+}
+
+/* Chapter intro (welcome to new chapter) */
+.ch-intro{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);
+  color:#fff;padding:24px 28px;border-radius:14px;
+  margin-bottom:22px;box-shadow:var(--soft-shadow);
+  position:relative;overflow:hidden;
+}
+.ch-intro::before{
+  content:'';position:absolute;left:-30px;top:-30px;
+  width:140px;height:140px;border-radius:50%;
+  background:radial-gradient(circle,rgba(196,93,58,0.25),transparent 70%);
+}
+.ch-intro .label{
+  position:relative;font-family:'Space Mono',monospace;
+  font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;
+  color:rgba(255,255,255,0.7);margin-bottom:6px;
+}
+.ch-intro h2{
+  position:relative;font-family:'Playfair Display',serif;
+  font-size:1.5rem;margin-bottom:10px;color:#fff;
+}
+.ch-intro p{
+  position:relative;font-size:0.95rem;line-height:1.6;
+  color:rgba(255,255,255,0.95);
+}
+
+/* Cards */
+.card{
+  background:#fff;padding:22px 26px;border-radius:14px;
+  margin-bottom:18px;box-shadow:var(--tile-shadow);
+}
+.card-title{
+  font-family:'Playfair Display',serif;font-size:1.2rem;
+  font-weight:700;color:var(--navy);margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.card-title .pill{
+  font-family:'Space Mono',monospace;font-size:0.65rem;
+  background:var(--gold);color:#fff;padding:3px 9px;
+  border-radius:12px;letter-spacing:0.1em;
+}
+
+/* Objectives grid */
+.obj-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:12px;
+}
+.obj{
+  background:var(--cream);padding:14px 16px;border-radius:10px;
+  border-left:3px solid var(--sage);
+  display:flex;gap:11px;align-items:flex-start;
+}
+.obj-num{
+  flex-shrink:0;width:24px;height:24px;border-radius:50%;
+  background:var(--sage);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Space Mono',monospace;font-size:0.78rem;font-weight:700;
+}
+.obj-text{font-size:0.93rem;color:var(--text);line-height:1.45;}
+
+/* Activity plan blocks */
+.plan-block{
+  display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--cream-dark);
+}
+.plan-block:last-child{border-bottom:none;}
+.plan-time{
+  flex-shrink:0;width:90px;
+  font-family:'Space Mono',monospace;font-size:0.78rem;
+  color:var(--terracotta);font-weight:700;
+}
+.plan-content{flex:1;font-size:0.92rem;color:var(--text-light);line-height:1.5;}
+.plan-content strong{color:var(--navy);}
+
+/* Resource cards */
+.res-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:14px;
+}
+.res-card{
+  background:#fff;padding:16px 18px;border-radius:12px;
+  border-top:3px solid var(--gold);box-shadow:var(--tile-shadow);
+}
+.res-card-day{
+  font-family:'Space Mono',monospace;font-size:0.7rem;
+  color:var(--terracotta);letter-spacing:0.1em;text-transform:uppercase;
+  margin-bottom:5px;
+}
+.res-card-topic{
+  font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);
+  font-size:1.02rem;margin-bottom:10px;
+}
+.res-card a{
+  display:block;font-size:0.84rem;color:var(--navy-light);
+  text-decoration:none;padding:6px 0;border-bottom:1px solid var(--cream-dark);
+  word-break:break-all;
+}
+.res-card a:last-child{border-bottom:none;}
+.res-card a:hover{color:var(--terracotta);}
+.res-card a::before{content:'→ ';color:var(--gold);font-weight:700;}
+
+/* ════ VOCAB — Flip Cards ════ */
+.vocab-section{margin-bottom:22px;}
+.vocab-section-title{
+  font-family:'Playfair Display',serif;font-size:1.15rem;
+  color:var(--navy);margin-bottom:4px;
+}
+.vocab-section-sub{
+  font-family:'Space Mono',monospace;font-size:0.7rem;
+  color:var(--text-hint);letter-spacing:0.1em;text-transform:uppercase;
+  margin-bottom:14px;
+}
+.vocab-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+  gap:11px;
+}
+.vocab-card{
+  perspective:1000px;height:110px;cursor:pointer;
+}
+.vocab-card-inner{
+  position:relative;width:100%;height:100%;
+  transition:transform 0.6s;transform-style:preserve-3d;
+}
+.vocab-card.flipped .vocab-card-inner{transform:rotateY(180deg);}
+.vocab-front,.vocab-back{
+  position:absolute;width:100%;height:100%;
+  -webkit-backface-visibility:hidden;backface-visibility:hidden;
+  display:flex;align-items:center;justify-content:center;
+  padding:14px;border-radius:11px;text-align:center;
+  box-shadow:var(--tile-shadow);
+}
+.vocab-front{
+  background:#fff;border:2px solid var(--cream-dark);
+  font-family:'Playfair Display',serif;font-weight:700;
+  color:var(--navy);font-size:0.98rem;
+}
+.vocab-back{
+  background:linear-gradient(135deg,var(--terracotta),var(--terracotta-light));
+  color:#fff;transform:rotateY(180deg);
+  font-size:0.95rem;font-weight:600;
+}
+.vocab-card.adj-card .vocab-front{
+  border-color:var(--sage-light);color:var(--sage);
+}
+.vocab-card.adj-card .vocab-back{
+  background:linear-gradient(135deg,var(--sage),#5A7350);
+}
+.vocab-card.room-card .vocab-front{
+  border-color:var(--gold-light);
+}
+.vocab-card.room-card .vocab-back{
+  background:linear-gradient(135deg,var(--gold),#B88838);color:var(--navy);
+}
+.vocab-hint{
+  text-align:center;font-size:0.82rem;color:var(--text-hint);
+  font-style:italic;margin-bottom:14px;
+}
+
+/* Grammar boxes */
+.gbox{
+  background:#fff;padding:24px 28px;border-radius:14px;
+  margin-bottom:22px;box-shadow:var(--tile-shadow);
+  border-top:4px solid var(--terracotta);
+}
+.gbox.alt{border-top-color:var(--sage);}
+.gbox.alt2{border-top-color:var(--gold);}
+.gbox h3{
+  font-family:'Playfair Display',serif;font-size:1.35rem;
+  color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.gbox h3 .num{
+  font-family:'Space Mono',monospace;font-size:0.7rem;
+  background:var(--terracotta);color:#fff;
+  padding:4px 10px;border-radius:11px;letter-spacing:0.1em;
+}
+.gbox.alt h3 .num{background:var(--sage);}
+.gbox.alt2 h3 .num{background:var(--gold);color:var(--navy);}
+.gbox .sub{
+  font-size:0.9rem;color:var(--text-hint);margin-bottom:16px;font-style:italic;
+}
+
+/* 3-column ser/estar/haber comparison */
+.three-col{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:12px;margin:14px 0;
+}
+@media(max-width:740px){.three-col{grid-template-columns:1fr;}}
+.col-card{
+  background:var(--cream);padding:16px 18px;border-radius:10px;
+  border-top:4px solid var(--navy);
+}
+.col-card.tc{border-top-color:var(--terracotta);}
+.col-card.gd{border-top-color:var(--gold);}
+.col-card.sg{border-top-color:var(--sage);}
+.col-card h4{
+  font-family:'Playfair Display',serif;font-size:1.18rem;
+  color:var(--navy);margin-bottom:4px;
+}
+.col-card .meaning{
+  font-family:'Space Mono',monospace;font-size:0.7rem;
+  color:var(--text-hint);letter-spacing:0.06em;
+  text-transform:uppercase;margin-bottom:10px;
+}
+.col-card .ex{
+  font-style:italic;font-size:0.86rem;color:var(--text);
+  background:#fff;padding:7px 10px;border-radius:6px;margin-bottom:5px;
+}
+.col-card .ex strong{color:var(--terracotta);font-style:normal;}
+.col-card.gd .ex strong{color:#A07A2D;}
+.col-card.sg .ex strong{color:var(--sage);}
+
+/* ESCAPA mnemonic visual */
+.escapa{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:8px;
+  margin:14px 0;
+}
+@media(max-width:700px){.escapa{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:420px){.escapa{grid-template-columns:repeat(2,1fr);}}
+.escapa-cell{
+  background:#fff;padding:13px 10px;border-radius:10px;
+  border:2px solid var(--sage-light);text-align:center;
+  transition:transform 0.15s;
+}
+.escapa-cell:hover{transform:translateY(-2px);}
+.escapa-letter{
+  display:block;font-family:'Playfair Display',serif;
+  font-size:1.8rem;font-weight:800;color:var(--sage);
+  line-height:1;margin-bottom:5px;
+}
+.escapa-word{
+  display:block;font-size:0.78rem;font-weight:700;
+  color:var(--navy);margin-bottom:3px;
+}
+.escapa-trans{
+  display:block;font-size:0.7rem;color:var(--text-hint);
+  font-style:italic;
+}
+
+/* Generic table */
+.conj-table{
+  width:100%;border-collapse:collapse;margin:14px 0;
+  background:#fff;border-radius:8px;overflow:hidden;
+  box-shadow:0 1px 4px rgba(27,46,79,0.05);
+}
+.conj-table th,.conj-table td{
+  padding:10px 14px;text-align:left;font-size:0.93rem;
+  border-bottom:1px solid var(--cream-dark);
+}
+.conj-table th{
+  background:var(--navy);color:#fff;
+  font-family:'Space Mono',monospace;font-size:0.72rem;
+  letter-spacing:0.08em;text-transform:uppercase;font-weight:700;
+}
+.conj-table td:first-child{font-weight:600;color:var(--navy);}
+.conj-table tr:last-child td{border-bottom:none;}
+.conj-table .accent{color:var(--terracotta);font-weight:700;font-style:italic;}
+
+/* OJO callout */
+.ojo{
+  background:#FFF6F0;border-left:4px solid var(--terracotta);
+  padding:14px 18px;border-radius:8px;margin:16px 0;
+}
+.ojo-title{
+  font-family:'Space Mono',monospace;font-size:0.72rem;
+  color:var(--terracotta);letter-spacing:0.12em;text-transform:uppercase;
+  font-weight:700;margin-bottom:6px;
+}
+.ojo p{font-size:0.92rem;color:var(--text);line-height:1.55;}
+.ojo em{color:var(--terracotta);font-style:italic;font-weight:600;}
+
+/* Exercise — fill-in items */
+.ex-item{
+  display:flex;align-items:baseline;gap:10px;padding:11px 0;
+  border-bottom:1px solid var(--cream-dark);font-size:0.97rem;
+}
+.ex-item:last-of-type{border-bottom:none;}
+.ex-num{
+  flex-shrink:0;width:28px;height:28px;border-radius:50%;
+  background:var(--cream);color:var(--navy);
+  display:inline-flex;align-items:center;justify-content:center;
+  font-family:'Space Mono',monospace;font-size:0.78rem;font-weight:700;
+}
+.ex-text{flex:1;line-height:1.7;color:var(--text);}
+.ex-hint{
+  font-family:'Space Mono',monospace;font-size:0.78rem;
+  color:var(--terracotta);margin-left:4px;
+}
+.blk{
+  display:inline-block;width:150px;padding:6px 10px;
+  border:2px solid var(--cream-dark);border-radius:6px;
+  font-family:'Source Sans 3',sans-serif;font-size:0.95rem;
+  color:var(--navy);background:#fff;outline:none;
+  transition:border-color 0.15s;
+}
+.blk.wide{width:200px;}
+.blk:focus{border-color:var(--gold);}
+.blk.ok{border-color:var(--sage);background:#F4F8F0;color:#3F5C32;}
+.blk.ng{border-color:var(--terracotta);background:#FFF0EA;color:#8E3A1F;}
+
+/* Buttons */
+.chk-btn,.rst-btn,.toggle-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:10px 18px;border:none;border-radius:8px;
+  font-family:'Source Sans 3',sans-serif;font-size:0.92rem;
+  font-weight:700;cursor:pointer;
+  transition:all 0.15s;min-height:42px;margin-top:14px;
+}
+.chk-btn{background:var(--navy);color:#fff;}
+.chk-btn:hover{background:var(--navy-light);}
+.rst-btn{background:#fff;color:var(--navy);border:2px solid var(--cream-dark);margin-left:6px;}
+.rst-btn:hover{border-color:var(--navy);}
+.toggle-btn{background:var(--gold);color:var(--navy);margin-left:6px;}
+.toggle-btn:hover{background:var(--gold-light);}
+.res-msg{
+  margin-top:12px;font-size:0.93rem;font-weight:700;
+  min-height:22px;
+}
+.res-msg.ok{color:#3F5C32;}
+.res-msg.ng{color:#8E3A1F;}
+
+/* Word bank */
+.word-bank{
+  background:var(--cream);padding:11px 14px;border-radius:8px;
+  margin-bottom:14px;font-size:0.88rem;
+}
+.word-bank-label{
+  font-family:'Space Mono',monospace;font-size:0.7rem;
+  color:var(--text-hint);letter-spacing:0.1em;text-transform:uppercase;
+  display:block;margin-bottom:4px;
+}
+.word-bank-words{color:var(--navy);font-weight:700;line-height:1.8;}
+.word-bank-words span{
+  display:inline-block;background:#fff;padding:3px 9px;
+  border-radius:11px;margin:2px 3px;font-size:0.84rem;
+  border:1px solid var(--cream-dark);
+}
+
+/* Estar table — 2-col grid */
+.estar-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px;
+  background:var(--cream);padding:18px;border-radius:12px;
+}
+@media(max-width:520px){.estar-grid{grid-template-columns:1fr;}}
+.estar-grid .field{
+  background:#fff;padding:11px 14px;border-radius:8px;
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+}
+.estar-grid .field label{
+  font-weight:700;color:var(--navy);font-size:0.92rem;
+}
+
+/* Model answers reveal */
+.model-box{
+  display:none;background:var(--cream);padding:14px 18px;border-radius:10px;
+  margin-top:14px;border-left:4px solid var(--gold);
+}
+.model-box.show{display:block;animation:fadein 0.3s ease;}
+.model-box-title{
+  font-family:'Space Mono',monospace;font-size:0.72rem;
+  color:var(--gold);letter-spacing:0.12em;text-transform:uppercase;
+  font-weight:700;margin-bottom:8px;
+}
+.model-box ol{padding-left:22px;}
+.model-box ol li{
+  font-size:0.9rem;color:var(--text);padding:5px 0;line-height:1.5;
+}
+.model-box ol li em{color:var(--terracotta);font-style:italic;font-weight:600;}
+
+/* Cultural / Activity card */
+.cult-card{
+  background:linear-gradient(135deg,var(--sage) 0%,#5A7350 100%);
+  color:#fff;padding:24px 28px;border-radius:14px;
+  margin-bottom:18px;box-shadow:var(--soft-shadow);
+}
+.cult-card .label{
+  font-family:'Space Mono',monospace;font-size:0.7rem;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:rgba(255,255,255,0.7);margin-bottom:6px;
+}
+.cult-card h3{
+  font-family:'Playfair Display',serif;font-size:1.4rem;
+  margin-bottom:12px;color:#fff;
+}
+.cult-card p{font-size:0.95rem;line-height:1.65;color:rgba(255,255,255,0.95);}
+.cult-card p + p{margin-top:10px;}
+.cult-card .fact-pills{
+  display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;
+}
+.cult-card .fact-pills span{
+  background:rgba(255,255,255,0.18);padding:5px 11px;
+  border-radius:14px;font-size:0.82rem;font-weight:600;
+}
+
+/* Activity card */
+.act-card{
+  background:#fff;padding:22px 26px;border-radius:14px;
+  border-left:4px solid var(--gold);box-shadow:var(--tile-shadow);
+  margin-bottom:18px;
+}
+.act-card h3{
+  font-family:'Playfair Display',serif;font-size:1.25rem;
+  color:var(--navy);margin-bottom:10px;
+}
+.act-step{
+  display:flex;gap:12px;padding:10px 0;
+  border-bottom:1px solid var(--cream-dark);
+}
+.act-step:last-of-type{border-bottom:none;}
+.snum{
+  flex-shrink:0;width:28px;height:28px;border-radius:50%;
+  background:var(--gold);color:var(--navy);
+  display:inline-flex;align-items:center;justify-content:center;
+  font-family:'Space Mono',monospace;font-size:0.78rem;font-weight:700;
+}
+.act-step p{font-size:0.93rem;color:var(--text);line-height:1.5;}
+.q-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:9px;margin-top:14px;
+}
+.q-box{
+  background:var(--cream);padding:11px 14px;border-radius:8px;
+  font-size:0.88rem;color:var(--navy);font-style:italic;font-weight:600;
+}
+
+/* Footer */
+.footer{
+  margin-top:36px;padding:20px;text-align:center;
+  font-family:'Space Mono',monospace;font-size:0.76rem;
+  color:var(--text-hint);letter-spacing:0.05em;
+}
+
+@media(max-width:600px){
+  .chap-head{padding:24px 22px;}
+  .header-title{font-size:1.7rem;}
+  .gbox,.card,.cult-card,.act-card,.ch-intro{padding:18px 20px;}
+  .three-col{grid-template-columns:1fr;}
+  .ex-item{flex-wrap:wrap;}
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <div class="chap-head">
+    <span class="header-badge">SPSCC · ESP 121</span>
+    <span class="header-title">Capítulo 4.1 — Lugares(1)</span>
+    <span class="header-subtitle">Semana 5 · Week 5</span>
+  </div>
+
+  <div class="completion-wrap">
+    <div class="completion-top">
+      <span class="completion-label">Mi progreso · My progress</span>
+      <span class="completion-pct" id="completionPct">0%</span>
+    </div>
+    <div class="prog-bar"><div class="prog-fill" id="pf" style="width:0%"></div></div>
+    <div class="completion-legend" id="completionLegend"></div>
+  </div>
+
+  <div class="submit-bar">
+    <label for="studentName">Nombre / Name</label>
+    <input id="studentName" type="text" placeholder="Type your full name here" autocomplete="name">
+    <button class="btn-download" onclick="downloadReport()">⬇ Download Report</button>
+    <span class="submit-hint">Enter your name, work through every tab, then download your report and submit it as homework.</span>
+  </div>
+
+  <nav class="nav" aria-label="Course sections">
+    <button class="tab active" onclick="switchTab('ov',this)">Inicio</button>
+    <button class="tab" onclick="switchTab('vo',this)">Vocabulario</button>
+    <button class="tab" onclick="switchTab('gr',this)">Gramática</button>
+    <button class="tab" onclick="switchTab('ej',this)">Ejercicios</button>
+    <button class="tab" onclick="switchTab('cu',this)">Cultura</button>
+    <button class="tab" onclick="switchTab('di',this)">Discusión</button>
+  </nav>
+
+  <div id="main-content"></div>
+
+  <!-- ═══ INICIO ═══ -->
+  <section class="sec active" id="sec-ov">
+    <h2 class="sec-title">Capítulo 4.1 · Lugares(1)</h2>
+    <p class="sec-sub">Semana 5 · Campus &amp; community places · ser/estar/haber · question words</p>
+
+    <!-- Welcome to new chapter -->
+    <div class="ch-intro">
+      <div class="label">Capítulo 4 · Empiezo · New chapter starts here</div>
+      <h2>Welcome to Chapter 4 — Lugares</h2>
+      <p>In this chapter, you will learn how to <strong>describe and evaluate places</strong> in your community and neighborhood. You will master the three "being" verbs (<em>ser</em>, <em>estar</em>, <em>haber</em>), learn all question words, and end the unit by writing a <strong>200–250 word community places quality report</strong>.</p>
+    </div>
+
+    <div class="week-hero">
+      <h1>This Week: Campus Vocabulary &amp; the Three "Being" Verbs</h1>
+      <p>Semana 5 builds the core toolkit for this chapter. You will learn 25+ place and room terms, master the <strong>ser / estar / haber</strong> distinction using the <strong>ESCAPA</strong> mnemonic, and produce information questions with every Spanish interrogative word. The unit closes with a graded <strong>discussion post</strong> about your favorite place.</p>
+      <div class="topic-chips">
+        <span class="chip">campus &amp; habitación</span>
+        <span class="chip">ser · estar · hay</span>
+        <span class="chip">ESCAPA</span>
+        <span class="chip">qué · quién · dónde · cuándo</span>
+        <span class="chip">cómo · cuánto · por qué · cuál</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Chapter 4 Learning Objectives <span class="pill">7 GOALS</span></div>
+      <div class="obj-grid">
+        <div class="obj"><span class="obj-num">1</span><span class="obj-text">Indicate location and identify campus and community places.</span></div>
+        <div class="obj"><span class="obj-num">2</span><span class="obj-text">Use <em>ser</em>, <em>estar</em>, and <em>haber (hay)</em> correctly and distinguish them.</span></div>
+        <div class="obj"><span class="obj-num">3</span><span class="obj-text">Form information questions using all interrogative words.</span></div>
+        <div class="obj"><span class="obj-num">4</span><span class="obj-text">Compare places using comparatives and superlatives.</span></div>
+        <div class="obj"><span class="obj-num">5</span><span class="obj-text">Use relative pronouns: <em>que</em>, <em>donde</em>, <em>en + article + que</em>.</span></div>
+        <div class="obj"><span class="obj-num">6</span><span class="obj-text">Produce objective (factual) and subjective (opinion) descriptions.</span></div>
+        <div class="obj"><span class="obj-num">7</span><span class="obj-text">Write a 200–250 word community places quality report.</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Online Resources <span class="pill">VIDEOS · PRÁCTICA</span></div>
+      <div class="res-grid">
+        <div class="res-card">
+          <div class="res-card-day">Vocabulario · Lugares</div>
+          <div class="res-card-topic">Campus &amp; Places Vocabulary</div>
+          <a href="https://www.youtube.com/@spanishpod101/search?query=places+around+town+Spanish" target="_blank" rel="noopener">Video: Places Around Town (SpanishPod101)</a>
+          <a href="https://englishnspanish.com/vocabulary/city-essential-places-services/" target="_blank" rel="noopener">Practice: Places &amp; Services Vocabulary</a>
+          <div class="res-check" id="res0"></div>
+        </div>
+        <div class="res-card">
+          <div class="res-card-day">Gramática · Ser / Estar / Hay</div>
+          <div class="res-card-topic">Ser / Estar / Hay</div>
+          <a href="https://www.youtube.com/watch?v=xs5M_XpyjvU" target="_blank" rel="noopener">Video: Ser vs. Estar</a>
+          <a href="https://studyspanish.com/grammar/test/serest1" target="_blank" rel="noopener">Practice: Ser / Estar Exercises</a>
+          <div class="res-check" id="res1"></div>
+        </div>
+        <div class="res-card">
+          <div class="res-card-day">Gramática · Interrogativas</div>
+          <div class="res-card-topic">Palabras Interrogativas</div>
+          <a href="https://www.youtube.com/watch?v=hIezag7r7Xc" target="_blank" rel="noopener">Video: Spanish Question Words (Señor Belles)</a>
+          <a href="https://personal.colby.edu/~bknelson/SLC/interrogatives.html" target="_blank" rel="noopener">Practice: Interrogatives</a>
+          <div class="res-check" id="res2"></div>
+        </div>
+        <div class="res-card">
+          <div class="res-card-day">Describir lugares</div>
+          <div class="res-card-topic">Describing Places</div>
+          <a href="https://www.youtube.com/@DreamingSpanish/search?query=places+description" target="_blank" rel="noopener">Video: Describing Places (Dreaming Spanish)</a>
+          <a href="https://www.spanishlearninglab.com/places-in-the-city-in-spanish-pdf-worksheet/" target="_blank" rel="noopener">Practice: Places in town Worksheet</a>
+          <div class="res-check" id="res3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ VOCABULARIO ═══ -->
+  <section class="sec" id="sec-vo">
+    <h2 class="sec-title">Vocabulario 1 · El campus y los lugares</h2>
+    <p class="sec-sub">Campus places · rooms · descriptive adjectives</p>
+
+    <p class="vocab-hint">Tap any card to flip it and see the translation. Test yourself before flipping.</p>
+
+    <!-- Campus places -->
+    <div class="card">
+      <div class="card-title">Lugares del campus <span class="pill">14 TERMS</span></div>
+      <div class="vocab-grid">
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">la clínica</div><div class="vocab-back">clinic</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">la biblioteca</div><div class="vocab-back">library</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">la cafetería</div><div class="vocab-back">cafeteria</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">el gimnasio</div><div class="vocab-back">gym</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">el laboratorio</div><div class="vocab-back">lab</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">el aula (f.) / la sala de clase</div><div class="vocab-back">classroom</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">la parada del autobús</div><div class="vocab-back">bus stop</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">el edificio</div><div class="vocab-back">building</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">el pasillo</div><div class="vocab-back">hallway</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">la sala de estudio</div><div class="vocab-back">study room</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">el campus</div><div class="vocab-back">campus</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">la oficina</div><div class="vocab-back">office</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">el estacionamiento</div><div class="vocab-back">parking lot</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">la piscina</div><div class="vocab-back">swimming pool</div></div></div>
+      </div>
+    </div>
+
+    <!-- Rooms -->
+    <div class="card">
+      <div class="card-title">Cuartos de la casa <span class="pill">5 ROOMS</span></div>
+      <div class="vocab-grid">
+        <div class="vocab-card room-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">la habitación</div><div class="vocab-back">bedroom / room</div></div></div>
+        <div class="vocab-card room-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">el baño</div><div class="vocab-back">bathroom</div></div></div>
+        <div class="vocab-card room-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">la cocina</div><div class="vocab-back">kitchen</div></div></div>
+        <div class="vocab-card room-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">el salón / la sala</div><div class="vocab-back">living room</div></div></div>
+        <div class="vocab-card room-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">el comedor</div><div class="vocab-back">dining room</div></div></div>
+      </div>
+    </div>
+
+    <!-- Adjectives -->
+    <div class="card">
+      <div class="card-title">Adjetivos descriptivos <span class="pill">7 PAIRS</span></div>
+      <p style="font-size:0.88rem;color:var(--text-light);margin-bottom:14px;">Each pair shows an opposite — perfect for ser/estar descriptions of places.</p>
+      <div class="vocab-grid">
+        <div class="vocab-card adj-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">amplio/a ↔ pequeño/a</div><div class="vocab-back">spacious ↔ small</div></div></div>
+        <div class="vocab-card adj-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">moderno/a ↔ antiguo/a</div><div class="vocab-back">modern ↔ old</div></div></div>
+        <div class="vocab-card adj-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">limpio/a ↔ sucio/a</div><div class="vocab-back">clean ↔ dirty</div></div></div>
+        <div class="vocab-card adj-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">cómodo/a ↔ incómodo/a</div><div class="vocab-back">comfortable ↔ uncomfortable</div></div></div>
+        <div class="vocab-card adj-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">ruidoso/a ↔ tranquilo/a</div><div class="vocab-back">noisy ↔ quiet</div></div></div>
+        <div class="vocab-card adj-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">cercano/a ↔ lejano/a</div><div class="vocab-back">nearby ↔ far</div></div></div>
+        <div class="vocab-card adj-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">bien equipado/a</div><div class="vocab-back">well-equipped</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ GRAMÁTICA ═══ -->
+  <section class="sec" id="sec-gr">
+    <h2 class="sec-title">Gramática · Two key topics</h2>
+    <p class="sec-sub">ser vs. estar vs. haber · question words · (G2 comparatives previews Week 9)</p>
+
+    <!-- G1: ser/estar/haber -->
+    <div class="gbox">
+      <h3><span class="num">G1</span>SER vs. ESTAR vs. HABER (hay)</h3>
+      <p class="sub">These three verbs all relate to "being" or "existing" — but they are NOT interchangeable.</p>
+
+      <div class="three-col">
+        <div class="col-card tc">
+          <h4>SER</h4>
+          <div class="meaning">= identity · permanent traits</div>
+          <div class="ex"><strong>Origin:</strong> El campus <strong>es</strong> de 1890.</div>
+          <div class="ex"><strong>Identity:</strong> <strong>Es</strong> una universidad pública.</div>
+          <div class="ex"><strong>Permanent:</strong> <strong>Es</strong> grande.</div>
+          <div class="ex"><strong>Profession:</strong> <strong>Soy</strong> estudiante.</div>
+        </div>
+        <div class="col-card gd">
+          <h4>ESTAR</h4>
+          <div class="meaning">= location · state · condition</div>
+          <div class="ex"><strong>Location:</strong> La biblioteca <strong>está</strong> en el centro.</div>
+          <div class="ex"><strong>State:</strong> El baño <strong>está</strong> limpio.</div>
+          <div class="ex"><strong>Emotion:</strong> <strong>Estoy</strong> nervioso hoy.</div>
+          <div class="ex"><strong>Progressive:</strong> <strong>Estamos</strong> estudiando.</div>
+        </div>
+        <div class="col-card sg">
+          <h4>HABER → hay</h4>
+          <div class="meaning">= existence · there is / there are</div>
+          <div class="ex"><strong>Existence:</strong> <strong>Hay</strong> una cafetería nueva.</div>
+          <div class="ex"><strong>There are:</strong> <strong>Hay</strong> diez edificios.</div>
+          <div class="ex"><strong>Question:</strong> ¿<strong>Hay</strong> una sala de estudio cerca?</div>
+          <div class="ex" style="background:#FFF6F0;color:var(--terracotta);"><strong>Note:</strong> <em>hay</em> never changes form!</div>
+        </div>
+      </div>
+
+      <div class="ojo">
+        <div class="ojo-title">KEY · Location of People/Things vs. Events</div>
+        <p>Use <em>estar</em> for the location of <strong>people and things</strong>. Use <em>ser</em> for the location of <strong>events</strong>: <em>La fiesta <strong>es</strong> en mi apartamento.</em></p>
+      </div>
+    </div>
+
+    <!-- ESCAPA mnemonic -->
+    <div class="gbox alt">
+      <h3><span class="num">¡OJO!</span>Memory trick — ESCAPA for ESTAR</h3>
+      <p class="sub">If a sentence fits any of these six categories → use <strong>estar</strong>. Everything else → <strong>ser</strong>.</p>
+
+      <div class="escapa">
+        <div class="escapa-cell">
+          <span class="escapa-letter">E</span>
+          <span class="escapa-word">Estados de ánimo</span>
+          <span class="escapa-trans">emotions</span>
+        </div>
+        <div class="escapa-cell">
+          <span class="escapa-letter">S</span>
+          <span class="escapa-word">Salud</span>
+          <span class="escapa-trans">health</span>
+        </div>
+        <div class="escapa-cell">
+          <span class="escapa-letter">C</span>
+          <span class="escapa-word">Condiciones</span>
+          <span class="escapa-trans">conditions</span>
+        </div>
+        <div class="escapa-cell">
+          <span class="escapa-letter">A</span>
+          <span class="escapa-word">Actividades</span>
+          <span class="escapa-trans">progressive</span>
+        </div>
+        <div class="escapa-cell">
+          <span class="escapa-letter">P</span>
+          <span class="escapa-word">Posición / lugar</span>
+          <span class="escapa-trans">location</span>
+        </div>
+        <div class="escapa-cell">
+          <span class="escapa-letter">A</span>
+          <span class="escapa-word">Apariencia</span>
+          <span class="escapa-trans">changeable look</span>
+        </div>
+      </div>
+
+      <table class="conj-table">
+        <thead><tr><th>Form</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td>E — emotion</td><td><em>Estoy nervioso por el examen.</em></td></tr>
+          <tr><td>S — health</td><td><em>Mi compañera está enferma hoy.</em></td></tr>
+          <tr><td>C — condition</td><td><em>El baño está limpio.</em></td></tr>
+          <tr><td>A — activity (progressive)</td><td><em>Estamos estudiando para el quiz.</em></td></tr>
+          <tr><td>P — position / location</td><td><em>La biblioteca está en el segundo piso.</em></td></tr>
+          <tr><td>A — appearance (changeable)</td><td><em>¡Qué guapa estás hoy!</em></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- G3: Question Words -->
+    <div class="gbox alt2">
+      <h3><span class="num">G3</span>Question Words · Palabras interrogativas</h3>
+      <p class="sub">All interrogatives carry a written accent. Pair the word with the right use.</p>
+
+      <table class="conj-table">
+        <thead>
+          <tr><th>Word · Meaning</th><th>Use</th><th>Example</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="accent">¿qué?</span> — what?</td><td>objects, definitions</td><td>¿Qué hay en el barrio?</td></tr>
+          <tr><td><span class="accent">¿quién/es?</span> — who?</td><td>people</td><td>¿Quién es tu compañero/a de clase?</td></tr>
+          <tr><td><span class="accent">¿dónde?</span> — where?</td><td>location</td><td>¿Dónde está la biblioteca?</td></tr>
+          <tr><td><span class="accent">¿cuándo?</span> — when?</td><td>time</td><td>¿Cuándo cierra la cafetería?</td></tr>
+          <tr><td><span class="accent">¿cómo?</span> — how? what is … like?</td><td>manner / description</td><td>¿Cómo es tu habitación?</td></tr>
+          <tr><td><span class="accent">¿cuánto/a?</span> — how much?</td><td>quantity (uncountable)</td><td>¿Cuánto cuesta el autobús?</td></tr>
+          <tr><td><span class="accent">¿cuántos/as?</span> — how many?</td><td>quantity (countable)</td><td>¿Cuántos estudiantes viven aquí?</td></tr>
+          <tr><td><span class="accent">¿por qué?</span> — why?</td><td>reason</td><td>¿Por qué prefieres ese café?</td></tr>
+          <tr><td><span class="accent">¿cuál/es?</span> — which? which one?</td><td>choice among options</td><td>¿Cuál es tu restaurante favorito?</td></tr>
+        </tbody>
+      </table>
+
+      <div class="ojo">
+        <div class="ojo-title">¿Qué? vs. ¿Cuál?</div>
+        <p>Both can translate as "what" — but they're different. Use <em>¿qué?</em> to ask for a <strong>definition</strong> (<em>¿Qué es una piscina?</em>). Use <em>¿cuál?</em> to pick from a <strong>set of options</strong> (<em>¿Cuál es tu lugar favorito?</em>). With <em>+ ser</em>, Spanish almost always uses <em>cuál</em>, not <em>qué</em>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EJERCICIOS ═══ -->
+  <section class="sec" id="sec-ej">
+    <h2 class="sec-title">Ejercicios · Práctica</h2>
+    <p class="sec-sub">Ejercicio 1 · 2 · 3 · 4 + Virtual Campus Tour</p>
+
+    <!-- Ej 1 — Describe the Campus -->
+    <div class="card">
+      <div class="card-title">Ejercicio 1 · Describe the Campus Location <span class="pill">VOCAB</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Write the Spanish word that matches each description. The article is already given.</p>
+
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">El lugar donde los estudiantes esperan por transporte: la <input class="blk wide" id="q1_1" data-answer="parada del autobús" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">El lugar con miles de libros donde estudias en silencio: la <input class="blk" id="q1_2" data-answer="biblioteca" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">El lugar donde comes con otros estudiantes en el campus: la <input class="blk" id="q1_3" data-answer="cafetería" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">El lugar donde haces ejercicio y practicas deportes: el <input class="blk" id="q1_4" data-answer="gimnasio" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">El lugar donde tienes tus clases con pizarrón y pupitres: el aula / la <input class="blk wide" id="q1_5" data-answer="sala de clase" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">El lugar donde tienes computadoras y haces experimentos: el <input class="blk" id="q1_6" data-answer="laboratorio" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text">El lugar donde puedes nadar: la <input class="blk" id="q1_7" data-answer="piscina" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text">El corredor que conecta los cuartos dentro de un edificio: el <input class="blk" id="q1_8" data-answer="pasillo" placeholder="___"></span></div>
+
+      <button class="chk-btn" onclick="checkBlanks('q1_1,q1_2,q1_3,q1_4,q1_5,q1_6,q1_7,q1_8','rs1')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('q1_1,q1_2,q1_3,q1_4,q1_5,q1_6,q1_7,q1_8','rs1')">Reset</button>
+      <div class="res-msg" id="rs1" aria-live="polite"></div>
+    </div>
+
+    <!-- Ej 2 — Estar Conjugation -->
+    <div class="card">
+      <div class="card-title">Ejercicio 2 · Tabla de conjugación — ESTAR <span class="pill">FROM MEMORY</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Complete the full <em>estar</em> conjugation from memory.</p>
+
+      <div class="estar-grid">
+        <div class="field"><label>yo</label><input class="blk" id="q2_1" data-answer="estoy" placeholder="___"></div>
+        <div class="field"><label>nosotros/as</label><input class="blk" id="q2_2" data-answer="estamos" placeholder="___"></div>
+        <div class="field"><label>tú</label><input class="blk" id="q2_3" data-answer="estás" placeholder="___"></div>
+        <div class="field"><label>ellos/Uds.</label><input class="blk" id="q2_4" data-answer="están" placeholder="___"></div>
+        <div class="field" style="grid-column:1 / -1;max-width:50%;"><label>él/ella/Ud.</label><input class="blk" id="q2_5" data-answer="está" placeholder="___"></div>
+      </div>
+
+      <button class="chk-btn" onclick="checkBlanks('q2_1,q2_2,q2_3,q2_4,q2_5','rs2')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('q2_1,q2_2,q2_3,q2_4,q2_5','rs2')">Reset</button>
+      <div class="res-msg" id="rs2" aria-live="polite"></div>
+    </div>
+
+    <!-- Ej 3 — ser/estar/hay -->
+    <div class="card">
+      <div class="card-title">Ejercicio 3 · Ser, Estar, or Hay — Choose the Correct Option <span class="pill">FILL-IN</span></div>
+
+      <div class="word-bank">
+        <span class="word-bank-label">Word Bank · all the forms you'll need</span>
+        <span class="word-bank-words">
+          <span>soy</span><span>eres</span><span>es</span><span>somos</span><span>son</span>
+          <span>estoy</span><span>estás</span><span>está</span><span>estamos</span><span>están</span>
+          <span>hay</span>
+        </span>
+      </div>
+
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">El gimnasio <input class="blk" id="q3_1" data-answer="está" placeholder="___"> abierto hasta las 11 de la noche.</span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text"><input class="blk" id="q3_2" data-answer="hay" placeholder="___"> dos salas de estudio en el tercer piso.</span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">Nuestra universidad <input class="blk" id="q3_3" data-answer="es" placeholder="___"> pública y muy conocida en la región.</span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">¿Dónde <input class="blk" id="q3_4" data-answer="está" placeholder="___"> la biblioteca central?</span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">La cafetería nueva <input class="blk" id="q3_5" data-answer="es" placeholder="___"> muy moderna y bien equipada.</span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">El evento de bienvenida <input class="blk" id="q3_6" data-answer="es" placeholder="___"> en el salón principal.</span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text">¿<input class="blk" id="q3_7" data-answer="estás" placeholder="___"> (tú) lista para el examen final?</span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text">No <input class="blk" id="q3_8" data-answer="hay" placeholder="___"> estacionamiento suficiente en el campus.</span></div>
+      <div class="ex-item"><span class="ex-num">9</span><span class="ex-text">Los apartamentos cerca del campus <input class="blk" id="q3_9" data-answer="están" placeholder="___"> un poco ruidosos por la noche.</span></div>
+      <div class="ex-item"><span class="ex-num">10</span><span class="ex-text">Mi compañero/a de clase <input class="blk" id="q3_10" data-answer="es" placeholder="___"> de Texas y estudia ingeniería.</span></div>
+
+      <button class="chk-btn" onclick="checkBlanks('q3_1,q3_2,q3_3,q3_4,q3_5,q3_6,q3_7,q3_8,q3_9,q3_10','rs3')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('q3_1,q3_2,q3_3,q3_4,q3_5,q3_6,q3_7,q3_8,q3_9,q3_10','rs3')">Reset</button>
+      <div class="res-msg" id="rs3" aria-live="polite"></div>
+    </div>
+
+    <!-- Ej 4 — Question Words -->
+    <div class="card">
+      <div class="card-title">Ejercicio 4 · Palabras interrogativas — Choose the Question Word <span class="pill">CHOOSE</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Fill in the missing <strong>question word</strong> so each question matches the answer given. Accents will be checked flexibly — but try to type them. Then click "Show model questions" to compare full versions.</p>
+
+      <div class="word-bank">
+        <span class="word-bank-label">Word Bank</span>
+        <span class="word-bank-words">
+          <span>Dónde</span><span>Cuándo</span><span>Cuántos</span><span>Por qué</span><span>Cómo</span><span>Cuánto</span><span>Quién</span><span>Cuál</span>
+        </span>
+      </div>
+
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text"><input class="blk" id="q4_1" data-answer="dónde" placeholder="___"> está la biblioteca? <span class="ex-hint">→ La biblioteca está en el edificio central.</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">¿<input class="blk" id="q4_2" data-answer="cuándo" placeholder="___"> cierra la cafetería? <span class="ex-hint">→ La cafetería cierra a las 10 de la noche.</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">¿<input class="blk" id="q4_3" data-answer="cuántos" placeholder="___"> edificios principales hay en el campus? <span class="ex-hint">→ En el campus hay seis edificios principales.</span></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">¿<input class="blk wide" id="q4_4" data-answer="por qué" placeholder="___"> prefieres la biblioteca? <span class="ex-hint">→ Prefiero la biblioteca porque es más tranquila.</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">¿<input class="blk" id="q4_5" data-answer="cómo" placeholder="___"> es tu habitación? <span class="ex-hint">→ Mi habitación es pequeña pero muy cómoda.</span></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">¿<input class="blk" id="q4_6" data-answer="cuánto" placeholder="___"> cuesta el estacionamiento? <span class="ex-hint">→ El estacionamiento cuesta 800 dólares por año.</span></span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text">¿<input class="blk" id="q4_7" data-answer="quién" placeholder="___"> es tu compañero/a de clase? <span class="ex-hint">→ Mi compañero/a de clase se llama Ana García.</span></span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text">¿<input class="blk" id="q4_8" data-answer="cuál" placeholder="___"> biblioteca prefieres? <span class="ex-hint">→ Prefiero la biblioteca B.</span></span></div>
+
+      <button class="chk-btn" onclick="checkBlanks('q4_1,q4_2,q4_3,q4_4,q4_5,q4_6,q4_7,q4_8','rs4')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('q4_1,q4_2,q4_3,q4_4,q4_5,q4_6,q4_7,q4_8','rs4')">Reset</button>
+      <button class="toggle-btn" onclick="toggleModels()">📋 Show / hide model questions</button>
+      <div class="res-msg" id="rs4" aria-live="polite"></div>
+
+      <div class="model-box" id="modelBox">
+        <div class="model-box-title">Sample full questions for reference</div>
+        <ol>
+          <li><em>¿Dónde está la biblioteca?</em></li>
+          <li><em>¿Cuándo cierra la cafetería?</em></li>
+          <li><em>¿Cuántos edificios principales hay en el campus?</em></li>
+          <li><em>¿Por qué prefieres la biblioteca?</em></li>
+          <li><em>¿Cómo es tu habitación?</em></li>
+          <li><em>¿Cuánto cuesta el estacionamiento?</em></li>
+          <li><em>¿Quién es tu compañero/a de clase?</em> (or: <em>¿Cómo se llama tu compañero/a?</em>)</li>
+          <li><em>¿Cuál biblioteca prefieres?</em> (or: <em>¿Cuál prefieres?</em>)</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- EJERCICIO 5 — error correction -->
+    <div class="card">
+      <div class="card-title">Ejercicio 5 · Corrige el error <span class="pill">SER / ESTAR / HAY</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Each sentence uses the wrong "being" verb, or uses <em>hay</em> with a definite article. Rewrite the whole sentence correctly. / Cada oración tiene <strong>un</strong> error. Escribe la oración corregida.</p>
+      <div id="ej5"></div>
+      <button class="chk-btn" onclick="checkEj5()">Check Answers</button>
+      <button class="rst-btn" onclick="resetEj5()">Reset</button>
+      <div class="res-msg" id="rs5" aria-live="polite"></div>
+    </div>
+
+    <!-- EJERCICIO 6 — describe a place -->
+    <div class="card">
+      <div class="card-title">Ejercicio 6 · Describe un lugar real <span class="pill">TAREA · SE CORRIGE SOLA</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Pick a real place on campus or in your town and describe it four ways. The content is yours — the page checks that each line uses the verb it asks for. / Escoge un lugar real y descríbelo con cada verbo.</p>
+
+      <div class="task-row">
+        <span class="rnum">0.</span>
+        <span class="task-tag">el lugar</span>
+        <input class="task-input" id="p6_place" type="text" placeholder="la biblioteca de SPSCC" autocomplete="off" style="flex:1;min-width:180px;">
+      </div>
+
+      <div id="ej6"></div>
+      <button class="chk-btn" onclick="checkEj6()">Check My Work</button>
+      <button class="rst-btn" onclick="resetEj6()">Reset</button>
+      <div class="res-msg" id="rs6" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ═══ CULTURA ═══ -->
+  <section class="sec" id="sec-cu">
+    <h2 class="sec-title">Nota Cultural · Lugares hispanos</h2>
+    <p class="sec-sub">Plazas, campus y vida pública en el mundo hispanohablante</p>
+
+    <div class="cult-card">
+      <div class="label">La plaza central · Heart of the city</div>
+      <h3>La plaza: el corazón de cada pueblo</h3>
+      <p>Almost every town and city in the Spanish-speaking world is organized around a <strong>plaza central</strong> — a public square that serves as the geographic, social, and historical heart of the community. The model dates back to colonial Spanish city planning: a central square flanked by the church, the town hall, and the main businesses.</p>
+      <p>The plaza is where people gather to eat, talk, protest, celebrate, and simply <em>pasear</em> (stroll). In Mexico City it's the <strong>Zócalo</strong>; in Madrid, the <strong>Plaza Mayor</strong>; in Buenos Aires, the <strong>Plaza de Mayo</strong>. Knowing the plaza means knowing the city.</p>
+      <div class="fact-pills">
+        <span>Zócalo (CDMX)</span>
+        <span>Plaza Mayor (Madrid)</span>
+        <span>Plaza de Mayo (BA)</span>
+        <span>Plaza de Armas (Lima)</span>
+        <span>Plaza San Francisco (Quito)</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">¿Sabías qué…? <span class="pill">DATOS</span></div>
+      <div class="obj-grid">
+        <div class="obj"><span class="obj-num" style="background:var(--terracotta);">1</span><span class="obj-text">In most Spanish-speaking countries, "campus" is a borrowed word — the historic term is <em>ciudad universitaria</em>. Mexico's UNAM and Madrid's Complutense both call their main areas <em>Ciudad Universitaria</em>.</span></div>
+        <div class="obj"><span class="obj-num" style="background:var(--gold);color:var(--navy);">2</span><span class="obj-text">Spanish universities don't typically have a single fenced campus. Faculties (facultades) are spread across the city, integrated with the urban fabric — students move between buildings on the metro.</span></div>
+        <div class="obj"><span class="obj-num" style="background:var(--sage);">3</span><span class="obj-text">UNAM's <em>Ciudad Universitaria</em> in Mexico City is a UNESCO World Heritage Site — celebrated for its 1950s modernist architecture and Diego Rivera murals.</span></div>
+        <div class="obj"><span class="obj-num">4</span><span class="obj-text">In many Latin American cities, the <em>cafetería</em> isn't a campus food hall — it's a corner café serving espresso and pastries. The student dining hall is more often called <em>el comedor</em>.</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Reflection · Reflexión <span class="pill">¿Y TÚ?</span></div>
+      <p style="font-size:0.95rem;color:var(--text);line-height:1.7;">¿Cómo es <strong>tu</strong> campus? ¿Hay una "plaza central" en tu ciudad o en SPSCC? ¿Cuál es el lugar más popular en tu campus? <em>Describe tu lugar favorito usando ser, estar y hay — y compáralo con la plaza central de una ciudad hispanohablante.</em></p>
+      <p style="margin-top:10px;font-size:0.88rem;color:var(--text-hint);font-style:italic;">Use this prompt as your starting point for the graded discussion post.</p>
+    </div>
+
+    <!-- Comprehension — multiple choice -->
+    <div class="card">
+      <div class="card-title">Comprensión Cultural · Opción Múltiple <span class="pill">CULT. 1</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Answer using the cultural note above. / Contesta según la nota cultural.</p>
+      <div id="cultMC"></div>
+      <button class="chk-btn" onclick="checkCultMC()">Check Answers</button>
+      <button class="rst-btn" onclick="resetCultMC()">Reset</button>
+      <div class="res-msg" id="rsCultMC" aria-live="polite"></div>
+    </div>
+
+    <!-- Comprehension — cierto / falso -->
+    <div class="card">
+      <div class="card-title">Comprensión Cultural · Cierto o Falso + Justifica <span class="pill">CULT. 2</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Decide <em>cierto</em> or <em>falso</em>, then type the fact from the reading that proves your answer. Both halves are scored.</p>
+      <div id="cultTF"></div>
+      <button class="chk-btn" onclick="checkCultTF()">Check Answers</button>
+      <button class="rst-btn" onclick="resetCultTF()">Reset</button>
+      <div class="res-msg" id="rsCultTF" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ═══ DISCUSIÓN ═══ -->
+  <section class="sec" id="sec-di">
+    <h2 class="sec-title">Discusión · Mi lugar favorito</h2>
+    <p class="sec-sub">Graded discussion post · 1 original post + 2 replies · Entirely in Spanish</p>
+
+    <div class="ch-intro">
+      <div class="label">Tarea de la Semana 5 · Discussion board</div>
+      <h2>What you're doing</h2>
+      <p>Write a post in Spanish describing <strong>one real place</strong> — somewhere on campus or in your town — and compare it to a <em>plaza central</em> from the Cultura section. Then reply to <strong>two</strong> classmates. Each reply must ask a question using a <strong>different interrogative word</strong>, so the whole board becomes the Virtual Campus Tour in writing.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Requisitos · Requirements <span class="pill">LÉELO PRIMERO</span></div>
+      <ul class="req-list">
+        <li><strong>Length:</strong> your original post is 100–150 words. Shorter or longer loses points.</li>
+        <li><strong>Spanish only</strong> — post and replies. No English.</li>
+        <li><strong>One real place</strong>, described with location, characteristics, and your own opinion.</li>
+        <li><strong>Compare it to a plaza</strong> from the Cultura section (Zócalo, Plaza Mayor, Plaza de Mayo, Plaza de Armas, Plaza San Francisco).</li>
+        <li><strong>Two replies</strong> to classmates, each asking a question with a <em>different</em> interrogative word.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Gramática obligatoria <span class="pill">CADA UNA AL MENOS 1 VEZ</span></div>
+      <table class="rubric-table">
+        <thead><tr><th>Estructura</th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td><strong>ser</strong> — identity, permanent traits</td><td><em>La biblioteca <strong>es</strong> moderna y tranquila.</em></td></tr>
+          <tr><td><strong>estar</strong> — location + condition (ESCAPA)</td><td><em><strong>Está</strong> en el edificio central. Hoy <strong>está</strong> cerrada.</em></td></tr>
+          <tr><td><strong>hay</strong> — existence, with an indefinite article or a number</td><td><em><strong>Hay</strong> muchas mesas y <strong>hay</strong> tres salas de estudio.</em></td></tr>
+          <tr><td><strong>Una interrogativa</strong> in each reply</td><td><em>¿<strong>Cuándo</strong> abre? / ¿<strong>Por qué</strong> te gusta?</em></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Cómo organizar tu post <span class="pill">1 – 5</span></div>
+      <ul class="req-list">
+        <li><strong>1. Saludo + el lugar.</strong> <em>«¡Hola a todos! Mi lugar favorito es…»</em></li>
+        <li><strong>2. ¿Dónde está?</strong> Usa <em>estar</em> para la ubicación.</li>
+        <li><strong>3. ¿Cómo es? ¿Qué hay?</strong> Usa <em>ser</em> para las características y <em>hay</em> para lo que existe allí.</li>
+        <li><strong>4. Tu opinión + la comparación.</strong> ¿Por qué te gusta? ¿En qué se parece o se diferencia de una plaza central hispana?</li>
+        <li><strong>5. Una pregunta para la clase.</strong> Termina invitando a tus compañeros a responder.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Modelo · Sample post <span class="pill">HAZLO SOBRE TI</span></div>
+      <div class="model-box show" style="margin-top:0;">
+        <p style="font-style:italic;line-height:1.9;">¡Hola a todos! Mi lugar favorito <strong>es</strong> la biblioteca de SPSCC. <strong>Está</strong> en el edificio central, cerca de la cafetería. <strong>Es</strong> moderna, luminosa y muy tranquila. <strong>Hay</strong> tres salas de estudio y <strong>hay</strong> muchas mesas grandes. Por la mañana <strong>está</strong> casi vacía y por eso prefiero estudiar temprano. Me gusta porque es el lugar donde toda la gente del campus se encuentra — como una <em>plaza central</em>. En México, el Zócalo <strong>es</strong> el corazón de la ciudad; nuestra biblioteca <strong>es</strong> el corazón del campus, pero <strong>está</strong> adentro y es más silenciosa. ¿Cuál es tu lugar favorito?</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Mi post original <span class="pill">100 – 150 PALABRAS</span></div>
+      <textarea class="disc-box" id="discPost" placeholder="¡Hola a todos! Mi lugar favorito es…"></textarea>
+      <div class="wordcount" id="discCount">0 palabras · necesitas entre 100 y 150</div>
+      <button class="chk-btn" onclick="checkDiscPost()">Check My Post</button>
+      <button class="rst-btn" onclick="resetDisc()">Reset</button>
+      <div class="res-msg" id="rsDisc" aria-live="polite"></div>
+      <div id="discFeedback" style="margin-top:12px;"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Mis respuestas a la clase <span class="pill">2 RESPUESTAS</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Draft your two replies here. Each one needs a question with a <strong>different</strong> interrogative word — the page checks that you didn't reuse the same one.</p>
+      <div id="discReplies"></div>
+      <button class="chk-btn" onclick="checkDiscReplies()">Check My Replies</button>
+      <button class="rst-btn" onclick="resetDiscReplies()">Reset</button>
+      <div class="res-msg" id="rsReplies" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Rúbrica <span class="pill">20 PUNTOS</span></div>
+      <table class="rubric-table">
+        <thead><tr><th>Criterio</th><th>Puntos</th></tr></thead>
+        <tbody>
+          <tr><td>Extensión (100–150 palabras) y todo en español</td><td>4</td></tr>
+          <tr><td>Usa <em>ser</em>, <em>estar</em> y <em>hay</em> correctamente</td><td>6</td></tr>
+          <tr><td>Describe un lugar real: ubicación, características y opinión</td><td>4</td></tr>
+          <tr><td>Compara el lugar con una plaza central hispana</td><td>3</td></tr>
+          <tr><td>Dos respuestas con interrogativas diferentes</td><td>3</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="footer">
+    SPSCC · Spanish 121 · Capítulo 4.1 · Semana 5
+  </div>
+
+</div>
+
+<script>
+/* ────────────────────────────────────────────────────────
+   Tab switching
+   ──────────────────────────────────────────────────────── */
+function switchTab(tab, el){
+  document.querySelectorAll('.tab').forEach(function(b){
+    b.classList.remove('active');
+    b.setAttribute('aria-selected','false');
+  });
+  document.querySelectorAll('.sec').forEach(function(s){s.classList.remove('active');});
+  if(el){
+    el.classList.add('active');
+    el.setAttribute('aria-selected','true');
+  }
+  var s = document.getElementById('sec-'+tab);
+  if(s) s.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ────────────────────────────────────────────────────────
+   Answer-checking utilities
+   - Accent-insensitive
+   - Case-insensitive
+   - Trims whitespace
+   - For "parada del autobús": also accepts "parada de autobús"
+   ──────────────────────────────────────────────────────── */
+function normalize(s){
+  if(!s) return '';
+  return s.toString()
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g,'')
+    .replace(/\s+/g,' ');
+}
+
+function checkBlanks(idsCSV, resultId){
+  var ids = idsCSV.split(',');
+  var correct = 0, total = ids.length;
+  ids.forEach(function(id){
+    var el = document.getElementById(id);
+    if(!el) return;
+    var user = normalize(el.value);
+    var expected = normalize(el.getAttribute('data-answer'));
+    el.classList.remove('ok','ng');
+    if(user === expected){
+      el.classList.add('ok');
+      correct++;
+    } else {
+      el.classList.add('ng');
+    }
+  });
+  var msg = document.getElementById(resultId);
+  if(msg){
+    if(correct === total){
+      msg.textContent = '¡Perfecto! ' + correct + ' / ' + total + ' correctas. ✓';
+      msg.className = 'res-msg ok';
+      markDone(resultId);
+    } else {
+      msg.textContent = correct + ' / ' + total + ' correctas. Revisa las marcadas en rojo y vuelve a intentar.';
+      msg.className = 'res-msg ng';
+    }
+  }
+}
+
+function resetBlanks(idsCSV, resultId){
+  var ids = idsCSV.split(',');
+  ids.forEach(function(id){
+    var el = document.getElementById(id);
+    if(!el) return;
+    el.value = '';
+    el.classList.remove('ok','ng');
+  });
+  var msg = document.getElementById(resultId);
+  if(msg){ msg.textContent = ''; msg.className = 'res-msg'; }
+}
+
+/* Toggle model questions reveal */
+function toggleModels(){
+  var box = document.getElementById('modelBox');
+  if(box) box.classList.toggle('show');
+}
+
+/* Kept for compatibility with checkBlanks(); the completion meter below
+   now owns the progress bar. */
+var done = new Set();
+function markDone(id){ done.add(id); }
+
+/* ════════════════════════════════════════════════════════
+   SHARED HELPERS
+   ════════════════════════════════════════════════════════ */
+function wordsOf(str){
+  return normalize(str).replace(/[¿?¡!.,;:]/g,' ').split(/\s+/).filter(Boolean);
+}
+function normalizeSentence(s){
+  return normalize(s).replace(/[¿?¡!.,;:]/g,'').replace(/\s+/g,' ').trim();
+}
+function val(id){
+  var el = document.getElementById(id);
+  return el ? (el.value || '').trim() : '';
+}
+function setMsg(id, ok, text){
+  var m = document.getElementById(id);
+  if(!m) return;
+  m.textContent = text;
+  m.className = 'res-msg ' + (ok ? 'ok' : 'ng');
+}
+function showFb(id, ok, msg){
+  var fb = document.getElementById(id);
+  if(!fb) return;
+  fb.className = 'task-fb show ' + (ok ? 'ok' : 'ng');
+  fb.textContent = (ok ? '✓ ' : '✗ ') + msg;
+}
+function clearFb(id){
+  var fb = document.getElementById(id);
+  if(fb) fb.className = 'task-fb';
+}
+
+/* ════════════════════════════════════════════════════════
+   MULTIPLE-CHOICE ENGINE (Cultura + resource checks)
+   ════════════════════════════════════════════════════════ */
+var quizState = {};
+var MC_SETS = {};
+
+function buildMC(data, key, containerId, compact){
+  var container = document.getElementById(containerId);
+  if(!container) return;
+  quizState[key] = data.map(function(){ return null; });
+  MC_SETS[key] = data;
+  data.forEach(function(item, i){
+    var div = document.createElement('div');
+    div.className = compact ? '' : 'quiz-item';
+    div.id = key + '_item_' + i;
+    var head = compact
+      ? '<div class="rc-label">✓ Comprueba que viste el recurso</div>' +
+        '<div class="rc-q">' + item.q + '</div>' +
+        '<div class="rc-gloss">' + item.gloss + '</div>'
+      : '<div class="quiz-q"><span class="qnum">' + (i+1) + '.</span>' + item.q + '</div>' +
+        '<div class="quiz-gloss">' + item.gloss + '</div>';
+    var opts = item.options.map(function(opt, j){
+      return '<button type="button" class="quiz-opt" id="' + key + '_' + i + '_' + j +
+             '" onclick="pickMC(\'' + key + '\',' + i + ',' + j + ')">' +
+             '<span class="letter">' + 'ABCD'[j] + '</span><span>' + opt + '</span></button>';
+    }).join('');
+    div.innerHTML = head + '<div class="quiz-options">' + opts + '</div>' +
+                    '<div class="quiz-explain" id="' + key + '_exp_' + i + '"></div>';
+    container.appendChild(div);
+  });
+}
+
+function pickMC(key, i, j){
+  quizState[key][i] = j;
+  MC_SETS[key][i].options.forEach(function(_, k){
+    document.getElementById(key + '_' + i + '_' + k).classList.toggle('selected', k === j);
+  });
+  if(MC_SETS[key].instant) revealMC(key, i);
+  updateCompletion();
+}
+
+function revealMC(key, i){
+  var item = MC_SETS[key][i];
+  var chosen = quizState[key][i];
+  var ok = chosen === item.answer;
+  item.options.forEach(function(_, j){
+    var btn = document.getElementById(key + '_' + i + '_' + j);
+    btn.classList.remove('is-correct','is-wrong');
+    if(j === item.answer) btn.classList.add('is-correct');
+    else if(j === chosen) btn.classList.add('is-wrong');
+  });
+  var exp = document.getElementById(key + '_exp_' + i);
+  exp.className = 'quiz-explain show';
+  exp.innerHTML = '<strong>' + (ok ? '✓ ¡Correcto!' : '✗ No exactamente.') + '</strong> ' + item.explain;
+  var wrap = document.getElementById(key + '_item_' + i);
+  if(wrap.className.indexOf('quiz-item') === 0){
+    wrap.className = 'quiz-item ' + (ok ? 'correct' : 'wrong');
+  }
+  return ok;
+}
+
+function mcScore(key){
+  var data = MC_SETS[key], correct = 0, answered = 0;
+  data.forEach(function(item, i){
+    if(quizState[key][i] !== null) answered++;
+    if(quizState[key][i] === item.answer) correct++;
+  });
+  return { correct: correct, answered: answered, total: data.length };
+}
+
+function resetMC(key){
+  var data = MC_SETS[key];
+  quizState[key] = data.map(function(){ return null; });
+  data.forEach(function(item, i){
+    item.options.forEach(function(_, j){
+      document.getElementById(key + '_' + i + '_' + j).className = 'quiz-opt';
+    });
+    document.getElementById(key + '_exp_' + i).className = 'quiz-explain';
+    var wrap = document.getElementById(key + '_item_' + i);
+    if(wrap.className.indexOf('quiz-item') === 0) wrap.className = 'quiz-item';
+  });
+}
+
+/* ════════════════════════════════════════════════════════
+   CULTURA — comprehension
+   ════════════════════════════════════════════════════════ */
+var cultMCData = [
+  {
+    q: '¿Cómo se llama la plaza central de la Ciudad de México?',
+    gloss: 'What is Mexico City’s central plaza called?',
+    options: ['La Plaza Mayor','El Zócalo','La Plaza de Mayo','La Plaza de Armas'],
+    answer: 1,
+    explain: 'El <strong>Zócalo</strong> es la plaza central de la Ciudad de México. La Plaza Mayor está en Madrid, la Plaza de Mayo en Buenos Aires y la Plaza de Armas en Lima.'
+  },
+  {
+    q: 'Según el modelo colonial español, ¿qué edificios rodean la plaza central?',
+    gloss: 'In the colonial model, which buildings flank the central plaza?',
+    options: ['La universidad y el hospital','El estadio y el mercado','La iglesia, el ayuntamiento y los comercios principales','Las casas de los estudiantes'],
+    answer: 2,
+    explain: 'El modelo colonial sitúa una plaza central rodeada por <strong>la iglesia, el ayuntamiento y los comercios principales</strong>.'
+  },
+  {
+    q: '¿Cuál es el término histórico en español para «campus»?',
+    gloss: 'What is the historic Spanish term for “campus”?',
+    options: ['La ciudad universitaria','El comedor','La facultad','La plaza mayor'],
+    answer: 0,
+    explain: '«Campus» es un préstamo del inglés. El término histórico es <strong>ciudad universitaria</strong> — como la UNAM en México o la Complutense en Madrid.'
+  },
+  {
+    q: 'En Latinoamérica, ¿cómo se llama normalmente el comedor estudiantil?',
+    gloss: 'In Latin America, what is the student dining hall usually called?',
+    options: ['La cafetería','El comedor','La plaza','La facultad'],
+    answer: 1,
+    explain: 'Se llama <strong>el comedor</strong>. Una <em>cafetería</em> suele ser un café de esquina que sirve espresso y pasteles, no un comedor grande.'
+  },
+  {
+    q: '¿Por qué es famosa la Ciudad Universitaria de la UNAM?',
+    gloss: 'Why is UNAM’s Ciudad Universitaria famous?',
+    options: ['Es la universidad más antigua del mundo','Es Patrimonio de la Humanidad de la UNESCO','Es la más grande de Europa','Está en una plaza colonial'],
+    answer: 1,
+    explain: 'Es <strong>Patrimonio de la Humanidad de la UNESCO</strong>, célebre por su arquitectura modernista de los años 50 y los murales de Diego Rivera.'
+  },
+  {
+    q: 'En el contexto de la plaza, ¿qué significa «pasear»?',
+    gloss: 'In the context of the plaza, what does “pasear” mean?',
+    options: ['Trabajar','Estudiar en grupo','Dar un paseo sin prisa','Comprar comida'],
+    answer: 2,
+    explain: '<em>Pasear</em> = to stroll. La gente va a la plaza a comer, hablar, celebrar y simplemente <em>pasear</em>.'
+  }
+];
+
+var cultTFData = [
+  {
+    q: 'En España, todas las facultades de una universidad están juntas en un solo campus cerrado.',
+    gloss: 'In Spain, all faculties of a university sit together on one enclosed campus.',
+    answer: false,
+    keywords: ['repartidas','dispersas','separadas','ciudad','metro','urbana','urbano','no','facultades','integradas'],
+    explain: 'Falso. Las <strong>facultades</strong> están repartidas por la ciudad e integradas en el tejido urbano — los estudiantes se mueven en metro.'
+  },
+  {
+    q: 'La plaza central de Buenos Aires se llama Plaza de Mayo.',
+    gloss: 'Buenos Aires’s central plaza is called Plaza de Mayo.',
+    answer: true,
+    keywords: ['mayo','buenos aires','argentina','plaza de mayo'],
+    explain: 'Cierto. En Buenos Aires es la <strong>Plaza de Mayo</strong>, igual que el Zócalo en México o la Plaza Mayor en Madrid.'
+  },
+  {
+    q: 'La plaza central es solo un lugar turístico sin función social.',
+    gloss: 'The central plaza is only a tourist site with no social function.',
+    answer: false,
+    keywords: ['social','corazon','corazón','gente','reune','reúne','comer','hablar','protestar','celebrar','pasear','historico','histórico','comunidad'],
+    explain: 'Falso. La plaza es el <strong>corazón geográfico, social e histórico</strong> de la comunidad: la gente va a comer, hablar, protestar, celebrar y pasear.'
+  }
+];
+
+var tfState = cultTFData.map(function(){ return null; });
+
+function buildCultTF(){
+  var c = document.getElementById('cultTF');
+  cultTFData.forEach(function(item, i){
+    var div = document.createElement('div');
+    div.className = 'quiz-item';
+    div.id = 'tf_item_' + i;
+    div.innerHTML =
+      '<div class="quiz-q"><span class="qnum">' + (i+1) + '.</span>' + item.q + '</div>' +
+      '<div class="quiz-gloss">' + item.gloss + '</div>' +
+      '<div class="tf-row">' +
+      '<button type="button" class="tf-btn" id="tf_' + i + '_t" onclick="pickTF(' + i + ',true)">Cierto</button>' +
+      '<button type="button" class="tf-btn" id="tf_' + i + '_f" onclick="pickTF(' + i + ',false)">Falso</button>' +
+      '</div>' +
+      '<div class="tf-label">Justifica · Because…</div>' +
+      '<input class="task-input" id="tf_just_' + i + '" type="text" placeholder="Porque el texto dice que…" autocomplete="off">' +
+      '<div class="quiz-explain" id="tf_exp_' + i + '"></div>';
+    c.appendChild(div);
+  });
+}
+
+function pickTF(i, v){
+  tfState[i] = v;
+  document.getElementById('tf_' + i + '_t').classList.toggle('selected', v === true);
+  document.getElementById('tf_' + i + '_f').classList.toggle('selected', v === false);
+  updateCompletion();
+}
+
+function gradeJustification(item, text){
+  var w = wordsOf(text);
+  if(!w.length) return { ok:false, msg:'Escribe tu justificación.' };
+  if(w.length < 4) return { ok:false, msg:'Justifica con una frase completa (mínimo 4 palabras).' };
+  var hit = item.keywords.some(function(k){ return normalize(text).indexOf(normalize(k)) !== -1; });
+  if(!hit) return { ok:false, msg:'Menciona el dato concreto del texto que lo demuestra.' };
+  return { ok:true, msg:'Justificación válida.' };
+}
+
+function gradeTF(i){
+  var item = cultTFData[i];
+  var just = val('tf_just_' + i);
+  return {
+    answered: tfState[i] !== null,
+    tfOk: tfState[i] === item.answer,
+    just: just,
+    jRes: gradeJustification(item, just)
+  };
+}
+
+function checkCultMC(){
+  var correct = 0;
+  cultMCData.forEach(function(_, i){ if(revealMC('cult', i)) correct++; });
+  setMsg('rsCultMC', correct === cultMCData.length,
+    correct + ' / ' + cultMCData.length + ' correctas.' + (correct === cultMCData.length ? ' ¡Perfecto! ✓' : ' Lee la explicación de cada una.'));
+  updateCompletion();
+}
+
+function resetCultMC(){
+  resetMC('cult');
+  setMsg('rsCultMC', true, '');
+  document.getElementById('rsCultMC').className = 'res-msg';
+  updateCompletion();
+}
+
+function checkCultTF(){
+  var correct = 0;
+  cultTFData.forEach(function(item, i){
+    var g = gradeTF(i);
+    var t = document.getElementById('tf_' + i + '_t');
+    var f = document.getElementById('tf_' + i + '_f');
+    [t,f].forEach(function(b){ b.classList.remove('is-correct','is-wrong'); });
+    (item.answer ? t : f).classList.add('is-correct');
+    if(g.answered && !g.tfOk) (item.answer ? f : t).classList.add('is-wrong');
+
+    var inp = document.getElementById('tf_just_' + i);
+    inp.style.borderBottomColor = g.jRes.ok ? 'var(--sage)' : 'var(--terracotta)';
+
+    var exp = document.getElementById('tf_exp_' + i);
+    exp.className = 'quiz-explain show';
+    exp.innerHTML = '<strong>' + (g.tfOk ? '✓' : '✗') + ' ' + item.explain + '</strong><br>' +
+      '<span style="color:' + (g.jRes.ok ? 'var(--sage)' : 'var(--terracotta)') + '">' +
+      (g.jRes.ok ? '✓' : '✗') + ' Justificación: ' + g.jRes.msg + '</span>';
+
+    document.getElementById('tf_item_' + i).className = 'quiz-item ' + (g.tfOk && g.jRes.ok ? 'correct' : 'wrong');
+    if(g.tfOk) correct++;
+    if(g.jRes.ok) correct++;
+  });
+  var total = cultTFData.length * 2;
+  setMsg('rsCultTF', correct === total, correct + ' / ' + total + ' puntos (respuesta + justificación).');
+  updateCompletion();
+}
+
+function resetCultTF(){
+  cultTFData.forEach(function(_, i){
+    tfState[i] = null;
+    ['t','f'].forEach(function(s){ document.getElementById('tf_' + i + '_' + s).className = 'tf-btn'; });
+    var inp = document.getElementById('tf_just_' + i);
+    inp.value = ''; inp.style.borderBottomColor = '';
+    document.getElementById('tf_exp_' + i).className = 'quiz-explain';
+    document.getElementById('tf_item_' + i).className = 'quiz-item';
+  });
+  document.getElementById('rsCultTF').className = 'res-msg';
+  document.getElementById('rsCultTF').textContent = '';
+  updateCompletion();
+}
+
+/* ════════════════════════════════════════════════════════
+   ONLINE RESOURCE CHECK QUESTIONS
+   Answers come from the linked video/practice, not this page.
+   ════════════════════════════════════════════════════════ */
+var resourceQuestions = [
+  {
+    q: '¿Cómo se dice <em>post office</em> en español?',
+    gloss: 'From the places & services vocabulary practice.',
+    options: ['la comisaría','la oficina de correos','la ferretería','el ayuntamiento'],
+    answer: 1,
+    explain: '<em>La oficina de correos</em> = post office. <em>La comisaría</em> es police station y <em>el ayuntamiento</em> es city hall.'
+  },
+  {
+    q: '¿Qué verbo se usa para decir la hora: <em>«___ las tres.»</em>?',
+    gloss: 'From the Ser vs. Estar video / StudySpanish practice.',
+    options: ['Están','Hay','Son','Es'],
+    answer: 2,
+    explain: 'La hora siempre usa <strong>ser</strong>: <em>Son las tres.</em> (plural) pero <em>Es la una.</em> (singular).'
+  },
+  {
+    q: '¿Cuándo se usa <em>¿cuál?</em> en vez de <em>¿qué?</em>',
+    gloss: 'From the question words video / interrogatives practice.',
+    options: ['Cuando pides una definición','Cuando eliges entre varias opciones','Solo en preguntas de sí o no','Cuando hablas del pasado'],
+    answer: 1,
+    explain: '<em>¿Cuál?</em> implica <strong>selección entre opciones</strong> (<em>¿Cuál prefieres?</em>). <em>¿Qué?</em> pide una definición (<em>¿Qué es esto?</em>).'
+  },
+  {
+    q: '¿Qué significa <em>la acera</em>?',
+    gloss: 'From the describing places video / places in town worksheet.',
+    options: ['the sidewalk','the corner','the fountain','the bench'],
+    answer: 0,
+    explain: '<em>La acera</em> = sidewalk. <em>La esquina</em> es corner, <em>la fuente</em> fountain y <em>el banco</em> bench.'
+  }
+];
+
+/* ════════════════════════════════════════════════════════
+   EJERCICIO 5 — corrige el error (ser / estar / hay)
+   ════════════════════════════════════════════════════════ */
+var ej5Data = [
+  { tag:'ubicación', wrong:'La biblioteca es en el edificio central.',
+    accepted:['La biblioteca está en el edificio central.'] },
+  { tag:'hay + artículo', wrong:'Hay la cafetería cerca del gimnasio.',
+    accepted:['Hay una cafetería cerca del gimnasio.','La cafetería está cerca del gimnasio.'] },
+  { tag:'característica', wrong:'El gimnasio está moderno y grande.',
+    accepted:['El gimnasio es moderno y grande.'] },
+  { tag:'condición', wrong:'Mi habitación es desordenada hoy.',
+    accepted:['Mi habitación está desordenada hoy.'] },
+  { tag:'existencia', wrong:'En el campus son seis edificios.',
+    accepted:['En el campus hay seis edificios.'] },
+  { tag:'condición', wrong:'La cafetería es cerrada ahora.',
+    accepted:['La cafetería está cerrada ahora.'] },
+  { tag:'hay + artículo', wrong:'Hay el estacionamiento detrás del edificio.',
+    accepted:['El estacionamiento está detrás del edificio.','Hay un estacionamiento detrás del edificio.'] },
+  { tag:'identidad', wrong:'La plaza central está el corazón de la ciudad.',
+    accepted:['La plaza central es el corazón de la ciudad.'] }
+];
+
+function buildEj5(){
+  var c = document.getElementById('ej5');
+  ej5Data.forEach(function(item, i){
+    var div = document.createElement('div');
+    div.className = 'task-row';
+    div.innerHTML =
+      '<span class="rnum">' + (i+1) + '.</span>' +
+      '<span class="strike">' + item.wrong + '</span>' +
+      '<span class="task-tag">' + item.tag + '</span>' +
+      '<input class="task-input" id="e5_' + i + '" type="text" placeholder="Escribe la oración corregida…" autocomplete="off" spellcheck="false">' +
+      '<div class="task-fb" id="fb5_' + i + '"></div>';
+    c.appendChild(div);
+  });
+}
+
+function checkEj5(){
+  var correct = 0;
+  ej5Data.forEach(function(item, i){
+    var v = val('e5_' + i);
+    var ok = item.accepted.some(function(a){ return normalizeSentence(a) === normalizeSentence(v); });
+    var inp = document.getElementById('e5_' + i);
+    inp.style.borderBottomColor = ok ? 'var(--sage)' : 'var(--terracotta)';
+    showFb('fb5_' + i, ok, ok ? '¡Correcto!' : item.accepted[0]);
+    if(ok) correct++;
+  });
+  setMsg('rs5', correct === ej5Data.length, correct + ' / ' + ej5Data.length + ' correctas.');
+  updateCompletion();
+}
+
+function resetEj5(){
+  ej5Data.forEach(function(_, i){
+    var inp = document.getElementById('e5_' + i);
+    inp.value = ''; inp.style.borderBottomColor = '';
+    clearFb('fb5_' + i);
+  });
+  document.getElementById('rs5').className = 'res-msg';
+  document.getElementById('rs5').textContent = '';
+  updateCompletion();
+}
+
+/* ════════════════════════════════════════════════════════
+   EJERCICIO 6 — describe a real place
+   Structure is checked; the place and details are the student's own.
+   ════════════════════════════════════════════════════════ */
+var LOCATION_WORDS = ['en','cerca','lado','detras','detrás','entre','junto','frente','enfrente','dentro','fuera','encima','debajo','al'];
+var DEF_ARTICLES = ['el','la','los','las'];
+
+var ej6Rows = [
+  {
+    tag:'ser + característica', placeholder:'Es moderna, luminosa y tranquila.',
+    check:function(v){
+      var w = wordsOf(v);
+      if(w.length < 4) return { ok:false, msg:'Escribe una oración completa (mínimo 4 palabras).' };
+      if(w.indexOf('esta') !== -1 || w.indexOf('estan') !== -1)
+        return { ok:false, msg:'Esta línea es para «ser» — guarda «está» para las líneas 2 y 3.' };
+      if(w.indexOf('es') === -1 && w.indexOf('son') === -1)
+        return { ok:false, msg:'Usa «es» o «son» para describir cómo es el lugar.' };
+      return { ok:true, msg:'ser + característica.' };
+    }
+  },
+  {
+    tag:'estar + ubicación', placeholder:'Está en el edificio central, cerca de la cafetería.',
+    check:function(v){
+      var w = wordsOf(v);
+      if(w.length < 4) return { ok:false, msg:'Escribe una oración completa (mínimo 4 palabras).' };
+      var i = w.indexOf('esta') !== -1 ? w.indexOf('esta') : w.indexOf('estan');
+      if(i === -1) return { ok:false, msg:'Usa «está» o «están» para la ubicación.' };
+      if(!w.some(function(x){ return LOCATION_WORDS.indexOf(x) !== -1; }))
+        return { ok:false, msg:'Añade dónde está: en, cerca de, al lado de, detrás de, entre…' };
+      return { ok:true, msg:'estar + ubicación.' };
+    }
+  },
+  {
+    tag:'estar + condición', placeholder:'Hoy está cerrada / Por la mañana está vacía.',
+    check:function(v){
+      var w = wordsOf(v);
+      if(w.length < 3) return { ok:false, msg:'Escribe una oración completa (mínimo 3 palabras).' };
+      if(w.indexOf('esta') === -1 && w.indexOf('estan') === -1)
+        return { ok:false, msg:'Usa «está» o «están» para la condición.' };
+      if(normalizeSentence(v) === normalizeSentence(val('p6_1')))
+        return { ok:false, msg:'Escribe algo distinto de la línea 2 — aquí describe un estado, no el lugar.' };
+      return { ok:true, msg:'estar + condición.' };
+    }
+  },
+  {
+    tag:'hay + sustantivo', placeholder:'Hay tres salas de estudio y muchas mesas.',
+    check:function(v){
+      var w = wordsOf(v);
+      if(w.length < 3) return { ok:false, msg:'Escribe una oración completa (mínimo 3 palabras).' };
+      var i = w.indexOf('hay');
+      if(i === -1) return { ok:false, msg:'Usa «hay» para decir qué existe en el lugar.' };
+      if(DEF_ARTICLES.indexOf(w[i+1]) !== -1)
+        return { ok:false, msg:'«hay» no va con el/la/los/las. Usa un número o un/una/unos/unas: «hay tres salas», «hay una fuente».' };
+      return { ok:true, msg:'hay + sustantivo indefinido.' };
+    }
+  }
+];
+
+function buildEj6(){
+  var c = document.getElementById('ej6');
+  ej6Rows.forEach(function(r, i){
+    var div = document.createElement('div');
+    div.className = 'task-row';
+    div.innerHTML =
+      '<span class="rnum">' + (i+1) + '.</span>' +
+      '<span class="task-tag">' + r.tag + '</span>' +
+      '<input class="task-input" id="p6_' + i + '" type="text" placeholder="' + r.placeholder + '" autocomplete="off">' +
+      '<div class="task-fb" id="fb6_' + i + '"></div>';
+    c.appendChild(div);
+  });
+}
+
+function checkEj6(){
+  var correct = 0;
+  var place = val('p6_place');
+  var placeInp = document.getElementById('p6_place');
+  var placeOk = place.length > 0;
+  placeInp.style.borderBottomColor = placeOk ? 'var(--sage)' : 'var(--terracotta)';
+  if(placeOk) correct++;
+
+  ej6Rows.forEach(function(r, i){
+    var v = val('p6_' + i);
+    var res = v ? r.check(v) : { ok:false, msg:'Escribe tu oración.' };
+    document.getElementById('p6_' + i).style.borderBottomColor = res.ok ? 'var(--sage)' : 'var(--terracotta)';
+    showFb('fb6_' + i, res.ok, res.msg);
+    if(res.ok) correct++;
+  });
+  var total = ej6Rows.length + 1;
+  setMsg('rs6', correct === total, correct + ' / ' + total + ' correctas.' + (placeOk ? '' : ' Escribe primero el nombre del lugar.'));
+  updateCompletion();
+}
+
+function resetEj6(){
+  var pi = document.getElementById('p6_place');
+  pi.value = ''; pi.style.borderBottomColor = '';
+  ej6Rows.forEach(function(_, i){
+    var inp = document.getElementById('p6_' + i);
+    inp.value = ''; inp.style.borderBottomColor = '';
+    clearFb('fb6_' + i);
+  });
+  document.getElementById('rs6').className = 'res-msg';
+  document.getElementById('rs6').textContent = '';
+  updateCompletion();
+}
+
+/* ════════════════════════════════════════════════════════
+   DISCUSIÓN — post + replies
+   ════════════════════════════════════════════════════════ */
+var PLAZA_NAMES = ['zocalo','zócalo','plaza mayor','plaza de mayo','plaza de armas','san francisco','plaza central','plaza'];
+// Order matters: "por qué" must be tested before "qué", and "cuál"/"cuánto"
+// before "cuando"-style prefixes, otherwise the shorter word wins.
+var INTERROGATIVES = [
+  { key:'por qué', forms:['por que'] },
+  { key:'cuál',    forms:['cual','cuales'] },
+  { key:'cuánto',  forms:['cuanto','cuanta','cuantos','cuantas'] },
+  { key:'cuándo',  forms:['cuando'] },
+  { key:'quién',   forms:['quien','quienes'] },
+  { key:'dónde',   forms:['donde','adonde'] },
+  { key:'cómo',    forms:['como'] },
+  { key:'qué',     forms:['que'] }
+];
+
+function countWords(s){ return wordsOf(s).length; }
+
+function updateDiscCount(){
+  var n = countWords(val('discPost'));
+  var el = document.getElementById('discCount');
+  var ok = n >= 100 && n <= 150;
+  el.textContent = n + ' palabras · necesitas entre 100 y 150';
+  el.className = 'wordcount ' + (n === 0 ? '' : (ok ? 'ok' : 'ng'));
+}
+
+function checkDiscPost(){
+  var text = val('discPost');
+  var w = wordsOf(text);
+  var n = w.length;
+  var checks = [
+    { label:'Extensión 100–150 palabras', ok: n >= 100 && n <= 150,
+      msg: n === 0 ? 'Todavía no has escrito nada.' : 'Tienes ' + n + ' palabras.' },
+    { label:'Usa «ser» (es / son)', ok: w.indexOf('es') !== -1 || w.indexOf('son') !== -1,
+      msg:'Describe cómo es el lugar con «es» o «son».' },
+    { label:'Usa «estar» (está / están)', ok: w.indexOf('esta') !== -1 || w.indexOf('estan') !== -1,
+      msg:'Di dónde está o cómo está con «está» o «están».' },
+    { label:'Usa «hay»', ok: w.indexOf('hay') !== -1,
+      msg:'Di qué hay en el lugar con «hay».' },
+    { label:'Compara con una plaza hispana', ok: PLAZA_NAMES.some(function(p){ return normalize(text).indexOf(normalize(p)) !== -1; }),
+      msg:'Menciona una plaza de la sección Cultura (el Zócalo, la Plaza Mayor, la Plaza de Mayo…).' },
+    { label:'Termina con una pregunta', ok: text.indexOf('?') !== -1,
+      msg:'Invita a la clase a responder con una pregunta.' }
+  ];
+  var correct = checks.filter(function(c){ return c.ok; }).length;
+  document.getElementById('discFeedback').innerHTML = checks.map(function(c){
+    return '<div class="task-fb show ' + (c.ok ? 'ok' : 'ng') + '">' +
+           (c.ok ? '✓ ' : '✗ ') + c.label + (c.ok ? '' : ' — ' + c.msg) + '</div>';
+  }).join('');
+  setMsg('rsDisc', correct === checks.length, correct + ' / ' + checks.length + ' requisitos cumplidos.');
+  updateCompletion();
+}
+
+function resetDisc(){
+  document.getElementById('discPost').value = '';
+  document.getElementById('discFeedback').innerHTML = '';
+  document.getElementById('rsDisc').className = 'res-msg';
+  document.getElementById('rsDisc').textContent = '';
+  updateDiscCount();
+  updateCompletion();
+}
+
+function buildDiscReplies(){
+  var c = document.getElementById('discReplies');
+  [0,1].forEach(function(i){
+    var div = document.createElement('div');
+    div.style.marginBottom = '16px';
+    div.innerHTML =
+      '<div class="tf-label">Respuesta ' + (i+1) + ' · debe incluir una pregunta</div>' +
+      '<textarea class="disc-box" id="reply_' + i + '" style="min-height:110px;" placeholder="Hola [nombre], me gusta tu lugar porque… ¿Cuándo…?"></textarea>' +
+      '<div class="task-fb" id="fbReply_' + i + '"></div>';
+    c.appendChild(div);
+  });
+}
+
+// Which interrogative did this reply use? Only text inside a question counts,
+// so "me gusta como describes tu lugar" isn't mistaken for "¿cómo?".
+function questionSpans(text){
+  var spans = (text.match(/¿[^?]*\?/g) || []).map(function(s){ return s; });
+  if(spans.length) return spans;
+  // No opening ¿ — fall back to the clause ending in the first ?
+  var i = text.indexOf('?');
+  if(i === -1) return [];
+  var start = Math.max(text.lastIndexOf('.', i), text.lastIndexOf(',', i), -1) + 1;
+  return [text.slice(start, i + 1)];
+}
+
+function findInterrogative(text){
+  var spans = questionSpans(text).map(normalize);
+  if(!spans.length) return null;
+  for(var i = 0; i < INTERROGATIVES.length; i++){
+    for(var j = 0; j < INTERROGATIVES[i].forms.length; j++){
+      var f = INTERROGATIVES[i].forms[j];
+      var re = new RegExp('(^|[\\s¿])' + f + '(\\s|$|\\?)');
+      for(var k = 0; k < spans.length; k++){
+        if(re.test(spans[k])) return INTERROGATIVES[i].key;
+      }
+    }
+  }
+  return null;
+}
+
+function gradeReply(i, otherWord){
+  var text = val('reply_' + i);
+  if(!text) return { ok:false, msg:'Escribe tu respuesta.', word:null };
+  if(countWords(text) < 12) return { ok:false, msg:'Amplía tu respuesta (mínimo 12 palabras).', word:null };
+  if(text.indexOf('?') === -1) return { ok:false, msg:'Tu respuesta debe incluir una pregunta.', word:null };
+  var word = findInterrogative(text);
+  if(!word) return { ok:false, msg:'Usa una palabra interrogativa: qué, quién, dónde, cuándo, cómo, cuánto, por qué, cuál.', word:null };
+  if(otherWord && word === otherWord)
+    return { ok:false, msg:'Ya usaste «' + word + '» en la otra respuesta — usa una interrogativa diferente.', word:word };
+  return { ok:true, msg:'Pregunta con «' + word + '».', word:word };
+}
+
+function checkDiscReplies(){
+  var first = gradeReply(0, null);
+  var second = gradeReply(1, first.word);
+  var results = [first, second];
+  var correct = 0;
+  results.forEach(function(r, i){
+    showFb('fbReply_' + i, r.ok, r.msg);
+    document.getElementById('reply_' + i).style.borderColor = r.ok ? 'var(--sage)' : 'var(--terracotta)';
+    if(r.ok) correct++;
+  });
+  setMsg('rsReplies', correct === 2, correct + ' / 2 respuestas válidas.');
+  updateCompletion();
+  return results;
+}
+
+function resetDiscReplies(){
+  [0,1].forEach(function(i){
+    var t = document.getElementById('reply_' + i);
+    t.value = ''; t.style.borderColor = '';
+    clearFb('fbReply_' + i);
+  });
+  document.getElementById('rsReplies').className = 'res-msg';
+  document.getElementById('rsReplies').textContent = '';
+  updateCompletion();
+}
+
+/* ════════════════════════════════════════════════════════
+   BUILD EVERYTHING
+   ════════════════════════════════════════════════════════ */
+buildMC(cultMCData, 'cult', 'cultMC', false);
+buildCultTF();
+resourceQuestions.forEach(function(q, i){
+  buildMC([q], 'res' + i, 'res' + i, true);
+  MC_SETS['res' + i].instant = true;
+});
+buildEj5();
+buildEj6();
+buildDiscReplies();
+
+/* ════════════════════════════════════════════════════════
+   COMPLETION METER
+   "Done" means answered, not necessarily correct.
+   ════════════════════════════════════════════════════════ */
+function idsFilled(prefix, n){
+  var out = [];
+  for(var i = 1; i <= n; i++) out.push(val(prefix + i).length > 0);
+  return out;
+}
+
+var completionGroups = [
+  { label:'Nombre', tab:'ov', items:function(){ return [val('studentName').length > 0]; } },
+  { label:'Recursos', tab:'ov', items:function(){
+      return resourceQuestions.map(function(_, i){ return quizState['res' + i][0] !== null; }); } },
+  { label:'Ej. 1–4', tab:'ej', items:function(){
+      return idsFilled('q1_',8).concat(idsFilled('q2_',5), idsFilled('q3_',10), idsFilled('q4_',8)); } },
+  { label:'Ej. 5', tab:'ej', items:function(){
+      return ej5Data.map(function(_, i){ return val('e5_' + i).length > 0; }); } },
+  { label:'Ej. 6', tab:'ej', items:function(){
+      return [val('p6_place').length > 0].concat(ej6Rows.map(function(_, i){ return val('p6_' + i).length > 0; })); } },
+  { label:'Cultura', tab:'cu', items:function(){
+      return cultMCData.map(function(_, i){ return quizState.cult[i] !== null; })
+        .concat(cultTFData.map(function(_, i){ return tfState[i] !== null; }),
+                cultTFData.map(function(_, i){ return val('tf_just_' + i).length > 0; })); } },
+  { label:'Discusión', tab:'di', items:function(){
+      return [val('discPost').length > 0, val('reply_0').length > 0, val('reply_1').length > 0]; } }
+];
+
+function completionStats(){
+  return completionGroups.map(function(g){
+    var arr = g.items();
+    return { label:g.label, tab:g.tab, done:arr.filter(Boolean).length, total:arr.length };
+  });
+}
+
+function updateCompletion(){
+  var stats = completionStats();
+  var d = 0, t = 0;
+  stats.forEach(function(g){ d += g.done; t += g.total; });
+  var pct = t ? Math.round(d / t * 100) : 0;
+  document.getElementById('completionPct').textContent = pct + '%';
+  document.getElementById('pf').style.width = pct + '%';
+  document.getElementById('completionLegend').innerHTML = stats.map(function(g){
+    return '<button type="button" class="legend-pill ' + (g.done === g.total ? 'done' : '') +
+           '" onclick="jumpTab(\'' + g.tab + '\')">' + g.label + ' ' + g.done + '/' + g.total + '</button>';
+  }).join('');
+}
+
+// Legend pills need to activate the matching tab button too.
+function jumpTab(tab){
+  var btns = document.querySelectorAll('.tab');
+  for(var i = 0; i < btns.length; i++){
+    if((btns[i].getAttribute('onclick') || '').indexOf("'" + tab + "'") !== -1){
+      switchTab(tab, btns[i]);
+      return;
+    }
+  }
+  switchTab(tab, null);
+}
+
+document.addEventListener('input', function(){ updateDiscCount(); updateCompletion(); });
+document.addEventListener('change', updateCompletion);
+
+/* ════════════════════════════════════════════════════════
+   STUDENT REPORT
+   ════════════════════════════════════════════════════════ */
+function escapeHtml(str){
+  return (str == null ? '' : String(str))
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+function stripTags(html){
+  var d = document.createElement('div');
+  d.innerHTML = html || '';
+  return (d.textContent || '').replace(/\s+/g,' ').trim();
+}
+
+function reportTable(title, scoreText, groups){
+  var blocks = groups.map(function(g){
+    var rows = g.items.map(function(it){
+      return '<tr class="' + (it.value ? (it.ok ? 'ok' : 'bad') : 'blank') + '">' +
+        '<td class="num">' + escapeHtml(it.label) + '</td>' +
+        '<td>' + (it.value ? escapeHtml(it.value) : '<span class="blanktxt">(en blanco)</span>') + '</td>' +
+        '<td class="note">' + escapeHtml(it.msg || '') + '</td>' +
+        '<td class="mark">' + (it.value ? (it.ok ? '✓' : '✗') : '—') + '</td></tr>';
+    }).join('');
+    return '<h3>' + escapeHtml(g.heading) + '</h3><table><tbody>' + rows + '</tbody></table>';
+  }).join('');
+  return '<h2>' + escapeHtml(title) + '<span class="score">' + escapeHtml(scoreText) + '</span></h2>' + blocks;
+}
+
+function collectBlanks(prefix, n, heading){
+  var items = [], correct = 0;
+  for(var i = 1; i <= n; i++){
+    var el = document.getElementById(prefix + i);
+    if(!el) continue;
+    var v = (el.value || '').trim();
+    var expected = el.getAttribute('data-answer') || '';
+    var ok = normalize(v) === normalize(expected);
+    if(ok) correct++;
+    items.push({ label:String(i), value:v, ok:ok, msg: ok ? 'Correcto.' : 'Respuesta: ' + expected });
+  }
+  return { heading:heading, items:items, correct:correct, total:items.length };
+}
+
+function buildReportHtml(name){
+  var stamp = new Date().toLocaleString('en-US',
+    { year:'numeric', month:'long', day:'numeric', hour:'2-digit', minute:'2-digit' });
+
+  var g1 = collectBlanks('q1_', 8,  'Ejercicio 1 — Vocabulario del campus');
+  var g2 = collectBlanks('q2_', 5,  'Ejercicio 2 — Formas de estar');
+  var g3 = collectBlanks('q3_', 10, 'Ejercicio 3 — ser / estar / hay');
+  var g4 = collectBlanks('q4_', 8,  'Ejercicio 4 — Palabras interrogativas');
+  var blanks = [g1,g2,g3,g4];
+  var blankCorrect = 0, blankTotal = 0;
+  blanks.forEach(function(g){ blankCorrect += g.correct; blankTotal += g.total; });
+
+  // Ejercicio 5
+  var e5items = ej5Data.map(function(item, i){
+    var v = val('e5_' + i);
+    var ok = item.accepted.some(function(a){ return normalizeSentence(a) === normalizeSentence(v); });
+    return { label:String(i+1), value:v, ok:ok, msg: ok ? 'Correcto.' : 'Respuesta: ' + item.accepted[0] };
+  });
+  var e5correct = e5items.filter(function(x){ return x.ok; }).length;
+
+  // Ejercicio 6
+  var placeVal = val('p6_place');
+  var e6items = [{ label:'el lugar', value:placeVal, ok: placeVal.length > 0,
+                   msg: placeVal ? 'Lugar elegido.' : 'Sin elegir.' }];
+  ej6Rows.forEach(function(r, i){
+    var v = val('p6_' + i);
+    var res = v ? r.check(v) : { ok:false, msg:'Sin escribir.' };
+    e6items.push({ label:r.tag, value:v, ok:res.ok, msg:res.msg });
+  });
+  var e6correct = e6items.filter(function(x){ return x.ok; }).length;
+
+  // Cultura
+  var mcItems = cultMCData.map(function(item, i){
+    var ch = quizState.cult[i];
+    return { label:String(i+1), value: ch === null ? '' : stripTags(item.options[ch]),
+             ok: ch === item.answer,
+             msg: ch === item.answer ? 'Correcto.' : 'Correcta: ' + stripTags(item.options[item.answer]) };
+  });
+  var tfItems = [];
+  cultTFData.forEach(function(item, i){
+    var g = gradeTF(i);
+    tfItems.push({ label:(i+1) + ' · C/F', value: g.answered ? (tfState[i] ? 'Cierto' : 'Falso') : '',
+                   ok:g.tfOk, msg: g.tfOk ? 'Correcto.' : 'Correcta: ' + (item.answer ? 'Cierto' : 'Falso') });
+    tfItems.push({ label:(i+1) + ' · justificación', value:g.just, ok:g.jRes.ok, msg:g.jRes.msg });
+  });
+  var resItems = resourceQuestions.map(function(item, i){
+    var ch = quizState['res' + i][0];
+    return { label:'Recurso ' + (i+1), value: ch === null ? '' : stripTags(item.options[ch]),
+             ok: ch === item.answer,
+             msg: ch === item.answer ? 'Correcto.' : 'Correcta: ' + stripTags(item.options[item.answer]) };
+  });
+  var cultCorrect = mcItems.concat(tfItems, resItems).filter(function(x){ return x.ok; }).length;
+  var cultTotal = mcItems.length + tfItems.length + resItems.length;
+
+  // Discusión
+  var post = val('discPost');
+  var postWords = countWords(post);
+  var replies = [0,1].map(function(i){ return val('reply_' + i); });
+  var r0 = gradeReply(0, null);
+  var r1 = gradeReply(1, r0.word);
+  var discItems = [
+    { label:'palabras', value: postWords ? postWords + ' palabras' : '',
+      ok: postWords >= 100 && postWords <= 150,
+      msg: postWords >= 100 && postWords <= 150 ? 'Dentro del límite.' : 'Debe estar entre 100 y 150.' },
+    { label:'respuesta 1', value:replies[0], ok:r0.ok, msg:r0.msg },
+    { label:'respuesta 2', value:replies[1], ok:r1.ok, msg:r1.msg }
+  ];
+  var discCorrect = discItems.filter(function(x){ return x.ok; }).length;
+
+  var totalCorrect = blankCorrect + e5correct + e6correct + cultCorrect + discCorrect;
+  var totalItems = blankTotal + e5items.length + e6items.length + cultTotal + discItems.length;
+
+  var stats = completionStats();
+  var cd = 0, ct = 0;
+  stats.forEach(function(g){ cd += g.done; ct += g.total; });
+  var cpct = ct ? Math.round(cd / ct * 100) : 0;
+  var compRows = stats.map(function(g){
+    return '<li class="' + (g.done === g.total ? 'checked' : '') + '">' +
+           (g.done === g.total ? '☑' : '☐') + ' ' + escapeHtml(g.label) + ' — ' + g.done + ' / ' + g.total + '</li>';
+  }).join('');
+
+  return '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">' +
+  '<title>Reporte — ' + escapeHtml(name) + ' — Semana 5</title><style>' +
+  "body{font-family:Georgia,'Times New Roman',serif;color:#2A2118;max-width:850px;margin:0 auto;padding:40px 32px;line-height:1.6;}" +
+  'header{border-bottom:4px solid #C45D3A;padding-bottom:16px;margin-bottom:28px;}' +
+  'h1{font-size:1.6rem;color:#1B2A4A;margin:0 0 6px;}' +
+  ".meta{font-family:'Courier New',monospace;font-size:0.78rem;color:#6B5D4A;}" +
+  '.meta strong{color:#1B2A4A;}' +
+  '.summary{background:#FBF5EA;border-left:5px solid #D4A24C;padding:14px 18px;margin-bottom:28px;font-size:0.95rem;}' +
+  'h2{font-size:1.1rem;color:#1B2A4A;margin:32px 0 10px;border-left:5px solid #C45D3A;padding-left:12px;}' +
+  "h3{font-size:0.78rem;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:0.06em;color:#6B5D4A;margin:18px 0 6px;font-weight:normal;}" +
+  ".score{font-family:'Courier New',monospace;font-size:0.72rem;font-weight:normal;color:#6B5D4A;display:block;padding-top:2px;}" +
+  'table{width:100%;border-collapse:collapse;font-size:0.86rem;margin-bottom:8px;}' +
+  'td{padding:8px 10px;border-bottom:1px solid #EDE2CE;vertical-align:top;}' +
+  "td.num{color:#6B5D4A;font-family:'Courier New',monospace;font-size:0.75rem;white-space:nowrap;}" +
+  'td.note{font-size:0.78rem;color:#6B5D4A;font-style:italic;}' +
+  'td.mark{text-align:center;font-weight:bold;width:26px;}' +
+  'tr.ok{background:#F2F8EE;} tr.ok td.mark{color:#4C7A3C;}' +
+  'tr.bad{background:#FCF0EE;} tr.bad td.mark{color:#A8452A;}' +
+  '.blanktxt{color:#A89A88;}' +
+  'ul.check{list-style:none;padding:0;font-size:0.9rem;}' +
+  'ul.check li{padding:5px 0;border-bottom:1px solid #F2EADB;}' +
+  'ul.check li.checked{color:#4C7A3C;}' +
+  '.essay{background:#FBF5EA;border:1px solid #EDE2CE;border-radius:8px;padding:16px 20px;white-space:pre-wrap;font-size:0.92rem;margin-bottom:12px;}' +
+  "footer{margin-top:40px;border-top:1px solid #EDE2CE;padding-top:12px;font-family:'Courier New',monospace;font-size:0.68rem;color:#6B5D4A;}" +
+  '@media print{body{padding:0;}h2{page-break-after:avoid;}table{page-break-inside:avoid;}}' +
+  '</style></head><body>' +
+  '<header><h1>Spanish 121 · Capítulo 4.1 — Lugares</h1>' +
+  '<p class="meta"><strong>Estudiante:</strong> ' + escapeHtml(name) +
+  ' &nbsp;·&nbsp; <strong>Semana 5</strong> &nbsp;·&nbsp; Generado: ' + escapeHtml(stamp) + '</p></header>' +
+  '<div class="summary"><strong>Resumen:</strong> ' + totalCorrect + ' / ' + totalItems +
+  ' respuestas correctas · Página completada al <strong>' + cpct + '%</strong> (' + cd + ' / ' + ct + ' elementos)</div>' +
+  '<h2>Progreso por sección</h2><ul class="check">' + compRows + '</ul>' +
+  reportTable('Ejercicios 1–4', blankCorrect + ' / ' + blankTotal + ' correctas', blanks) +
+  reportTable('Ejercicio 5 — Corrige el error', e5correct + ' / ' + e5items.length + ' correctas',
+    [{ heading:'ser / estar / hay', items:e5items }]) +
+  reportTable('Ejercicio 6 — Describe un lugar real', e6correct + ' / ' + e6items.length + ' correctas · revisado automáticamente',
+    [{ heading:'Descripción estructurada', items:e6items }]) +
+  reportTable('Comprensión Cultural y Recursos', cultCorrect + ' / ' + cultTotal + ' correctas',
+    [{ heading:'Opción múltiple — cultura', items:mcItems },
+     { heading:'Cierto / falso + justificación', items:tfItems },
+     { heading:'Preguntas de los recursos en línea', items:resItems }]) +
+  '<h2>Discusión — Mi lugar favorito<span class="score">' + discCorrect + ' / ' + discItems.length +
+  ' requisitos automáticos · el contenido lo califica el instructor</span></h2>' +
+  '<h3>Post original (' + postWords + ' palabras)</h3>' +
+  '<div class="essay">' + (post ? escapeHtml(post) : '(Sin escribir.)') + '</div>' +
+  '<h3>Respuesta 1</h3><div class="essay">' + (replies[0] ? escapeHtml(replies[0]) : '(Sin escribir.)') + '</div>' +
+  '<h3>Respuesta 2</h3><div class="essay">' + (replies[1] ? escapeHtml(replies[1]) : '(Sin escribir.)') + '</div>' +
+  reportTable('Revisión automática de la discusión', discCorrect + ' / ' + discItems.length,
+    [{ heading:'Requisitos', items:discItems }]) +
+  '<footer>South Puget Sound Community College · ESP 121 · Capítulo 4.1 · Reporte generado desde la página de la Semana 5. ' +
+  'Para entregar como PDF, abre este archivo e imprime → Guardar como PDF.</footer></body></html>';
+}
+
+function downloadReport(){
+  var field = document.getElementById('studentName');
+  var name = (field.value || '').trim();
+  if(!name){
+    field.focus();
+    field.style.borderColor = '#A8452A';
+    alert('Escribe tu nombre primero. / Please enter your name before downloading the report.');
+    setTimeout(function(){ field.style.borderColor = ''; }, 2500);
+    return;
+  }
+  var html = buildReportHtml(name);
+  var safe = name.replace(/[^a-z0-9]+/gi,'_').replace(/^_+|_+$/g,'') || 'estudiante';
+  var blob = new Blob([html], { type:'text/html;charset=utf-8' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'Semana5_Cap4-1_' + safe + '.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
+}
+
+updateDiscCount();
+updateCompletion();
+</script>
+
+</body>
+</html>
